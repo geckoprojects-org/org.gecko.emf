@@ -1,6 +1,4 @@
 -privatepackage: \
-	org.gecko.emf.osgi.components.config,\
-	org.gecko.emf.osgi.components.dynamic,\
 	org.gecko.emf.osgi.components,\
 	org.gecko.emf.osgi.urihandler,\
 	org.gecko.emf.osgi.ecore
@@ -12,9 +10,7 @@ Export-Package: \
 	org.gecko.emf.osgi.configurator,\
 	org.gecko.emf.osgi.annotation.*,\
 	org.gecko.emf.osgi.constants,\
-	org.gecko.emf.osgi.components.config,\
-	org.gecko.emf.osgi.provider,\
-	org.gecko.emf.osgi.resourceset
+	org.gecko.emf.osgi.provider
 	
-Bundle-Name: EMF OSGi All-In-One Implementation
-Bundle-Description: Gecko EMF OSGi Implementation all in one Bundle
+Bundle-Name: EMF OSGi Minimal Implementation Bundle
+Bundle-Description: Provides the minmal set of functionlity required for GeckoEMF

@@ -1,5 +1,7 @@
 -library: enableOSGi-Test
--runrequires: bnd.identity;id='org.gecko.emf.osgi.itest'
+-runrequires: \
+	bnd.identity;id='org.gecko.emf.osgi.itest',\
+	bnd.identity;id='org.gecko.emf.osgi.itest.minimal'
 -runfw: org.apache.felix.framework;version='[7.0.5,7.0.5]'
 -runee: JavaSE-17
 -runbundles: \
@@ -26,15 +28,17 @@
 	net.bytebuddy.byte-buddy;version='[1.14.9,1.14.10)',\
 	net.bytebuddy.byte-buddy-agent;version='[1.14.9,1.14.10)',\
 	org.opentest4j;version='[1.3.0,1.3.1)',\
-	org.gecko.emf.osgi.component;version=snapshot,\
 	org.gecko.emf.osgi.example.model.manual;version=snapshot,\
 	org.gecko.emf.osgi.itest;version=snapshot,\
 	org.osgi.test.assertj.monitoring;version=snapshot,\
 	org.eclipse.emf.common;version='[2.29.0,2.29.1)',\
 	org.eclipse.emf.ecore;version='[2.35.0,2.35.1)',\
-	org.eclipse.emf.ecore.xmi;version='[2.36.0,2.36.1)'
+	org.eclipse.emf.ecore.xmi;version='[2.36.0,2.36.1)',\
+	org.gecko.emf.osgi.component.config;version=snapshot,\
+	org.gecko.emf.osgi.component.minimal;version=snapshot,\
+	org.gecko.emf.osgi.itest.minimal;version=snapshot
 -runblacklist: \
 	bnd.identity;id='org.gecko.emf.osgi.extender',\
-	bnd.identity;id='org.gecko.emf.osgi.component.config',\
-	bnd.identity;id='org.gecko.emf.osgi.component.minimal'
--runvm: -DecoreBase=${.}
+	bnd.identity;id='org.gecko.emf.osgi.component',\
+	bnd.identity;id='org.gecko.emf.osgi.api'
+-runvm: -DecoreBase=${.}/../org.gecko.emf.osgi.itest

@@ -1,3 +1,11 @@
 # Export over bnd.bnd file
 Bundle-Name: EMF OSGi API
 Bundle-Description: Gecko EMF OSGI API
+
+Export-Package: \
+	org.gecko.emf.osgi,\
+	org.gecko.emf.osgi.helper,\
+	org.gecko.emf.osgi.factory,\
+	org.gecko.emf.osgi.annotation.*,\
+	org.gecko.emf.osgi.configurator,\
+	org.gecko.emf.osgi.constants

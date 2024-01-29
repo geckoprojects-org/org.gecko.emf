@@ -1,5 +1,3 @@
-Test-Cases: ${classes;HIERARCHY_INDIRECTLY_ANNOTATED;org.junit.platform.commons.annotation.Testable;CONCRETE}
-
 -library: enableOSGi-Test
 
 # Build dependencies 
@@ -31,4 +29,4 @@ Private-Package: org.gecko.emf.osgi.itest.configurator
 Bundle-Name: EMF OSGi Tests
 Bundle-Description: Gecko EMF OSGi integration tests
 
-#-baseline: test
+-baseline: 

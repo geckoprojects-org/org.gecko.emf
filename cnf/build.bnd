@@ -27,7 +27,7 @@ github-project: org.gecko.emf
 dimcBaselining: true
 mavenCentral: true
 
-#-baseline: *
+-baseline: *
 
 -groupid: org.geckoprojects.emf
 

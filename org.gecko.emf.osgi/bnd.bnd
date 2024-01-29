@@ -1,13 +1,5 @@
 src=${^src},src-gen
 
-Export-Package: \
-	org.gecko.emf.osgi,\
-	org.gecko.emf.osgi.helper,\
-	org.gecko.emf.osgi.factory,\
-	org.gecko.emf.osgi.annotation.*,\
-	org.gecko.emf.osgi.configurator,\
-	org.gecko.emf.osgi.constants
-
 -buildpath: \
 	org.osgi.framework;version=latest,\
 	org.osgi.annotation.bundle;version=latest,\
@@ -22,7 +14,9 @@ Export-Package: \
 	org.eclipse.emf.common;version=latest,\
 	org.eclipse.emf.ecore;version=latest,\
 	org.eclipse.emf.ecore.xmi;version=latest,\
-	biz.aQute.bnd.annotation;version=latest
+	biz.aQute.bnd.annotation;version=latest,\
+	org.osgi.namespace.implementation,\
+	org.osgi.resource
 	
 -sub: *.bnd
 
