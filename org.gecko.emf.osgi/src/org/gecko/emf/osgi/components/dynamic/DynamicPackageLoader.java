@@ -30,8 +30,12 @@ import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.gecko.emf.osgi.configurator.EPackageConfigurator;
 import org.gecko.emf.osgi.constants.EMFNamespaces;
 import org.gecko.emf.osgi.helper.ServicePropertiesHelper;
+import org.osgi.annotation.bundle.Requirement;
 import org.osgi.framework.BundleContext;
 import org.osgi.framework.ServiceRegistration;
+import org.osgi.namespace.implementation.ImplementationNamespace;
+import org.osgi.resource.Namespace;
+import org.osgi.service.cm.ConfigurationConstants;
 import org.osgi.service.cm.ConfigurationException;
 import org.osgi.service.cm.annotations.RequireConfigurationAdmin;
 import org.osgi.service.component.ComponentServiceObjects;
@@ -42,7 +46,6 @@ import org.osgi.service.component.annotations.Deactivate;
 import org.osgi.service.component.annotations.Modified;
 import org.osgi.service.component.annotations.Reference;
 import org.osgi.service.metatype.annotations.Designate;
-import org.osgi.service.metatype.annotations.RequireMetaTypeImplementation;
 
 import aQute.bnd.annotation.service.ServiceCapability;
 
@@ -59,7 +62,10 @@ import aQute.bnd.annotation.service.ServiceCapability;
 @Component(name=DYNAMIC_MODEL_CONFIGURATOR_CONFIG_NAME, configurationPolicy = ConfigurationPolicy.REQUIRE)
 @Designate(ocd = org.gecko.emf.osgi.components.dynamic.DynamicEMFModel.class, factory = true)
 @RequireConfigurationAdmin
-@RequireMetaTypeImplementation
+@Requirement(namespace = ImplementationNamespace.IMPLEMENTATION_NAMESPACE, //
+	name = ConfigurationConstants.CONFIGURATION_ADMIN_IMPLEMENTATION, //
+	version = ConfigurationConstants.CONFIGURATION_ADMIN_SPECIFICATION_VERSION,
+	resolution = Namespace.RESOLUTION_OPTIONAL)
 @ServiceCapability(EPackage.class)
 @ServiceCapability(EPackageConfigurator.class)
 public class DynamicPackageLoader{

@@ -18,13 +18,16 @@ import java.util.concurrent.atomic.AtomicReference;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.gecko.emf.osgi.ResourceSetCache;
 import org.gecko.emf.osgi.ResourceSetFactory;
+import org.osgi.annotation.bundle.Requirement;
 import org.osgi.annotation.versioning.ProviderType;
-import org.osgi.service.cm.annotations.RequireConfigurationAdmin;
+import org.osgi.service.cm.ConfigurationConstants;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.ConfigurationPolicy;
 import org.osgi.service.component.annotations.Reference;
 import org.osgi.service.component.annotations.ReferenceCardinality;
 import org.osgi.service.component.annotations.ReferencePolicy;
+import org.osgi.namespace.implementation.ImplementationNamespace;
+import org.osgi.resource.Namespace;
 
 /**
  * A cache for a {@link ResourceSet}. Whereas the {@link ResourceSetFactory} only creates new instances of
@@ -33,7 +36,10 @@ import org.osgi.service.component.annotations.ReferencePolicy;
  * @author Mark Hoffmann
  */
 @Component(name="ResourceSetCache", service=ResourceSetCache.class, configurationPolicy=ConfigurationPolicy.REQUIRE)
-@RequireConfigurationAdmin
+@Requirement(namespace = ImplementationNamespace.IMPLEMENTATION_NAMESPACE, //
+	name = ConfigurationConstants.CONFIGURATION_ADMIN_IMPLEMENTATION, //
+	version = ConfigurationConstants.CONFIGURATION_ADMIN_SPECIFICATION_VERSION,
+	resolution = Namespace.RESOLUTION_OPTIONAL)
 @ProviderType
 public class ResourceSetCacheComponent implements ResourceSetCache {
 	
