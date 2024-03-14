@@ -20,6 +20,6 @@ package org.gecko.emf.osgi.constants;
  */
 public class VersionConstant {
 
-	public static final String GECKOPROJECTS_EMF_VERSION = "6.1.2"; //$NON-NLS-1$
+	public static final String GECKOPROJECTS_EMF_VERSION = "6.1.4"; //$NON-NLS-1$
 	public static final String GECKOPROJECTS_EMF_MAJOR_VERSION = "6"; //$NON-NLS-1$
 }

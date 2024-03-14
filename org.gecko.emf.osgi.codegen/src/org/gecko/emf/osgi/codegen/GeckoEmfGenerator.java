@@ -25,7 +25,6 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
-import java.util.Properties;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 import org.eclipse.core.runtime.IProgressMonitor;
@@ -131,12 +130,7 @@ public class GeckoEmfGenerator implements Generator<GeneratorOptions> {
 				initializeLog(context.getBase(), context.get(PROP_LOGFILE));
 			}
 			
-			Properties props = new Properties();
-			props.load(getClass().getResourceAsStream("/version.properties"));
-			
-			String version = props.getProperty("version");
-			
-			info("Running Gecko EMF Codegen Version " + version);
+			info("Running Gecko EMF Codegen Version " + VersionConstant.GECKOPROJECTS_EMF_VERSION);
 			
 			String genFolder = context.get(PROP_OUTPUT);
 			File output = null;
