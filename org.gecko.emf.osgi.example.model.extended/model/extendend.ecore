@@ -3,7 +3,7 @@
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="extended" nsURI="http://gecko.org/example/model/extendendend/1.0"
     nsPrefix="extended">
   <eAnnotations source="Version">
-    <details key="value" value="1.2.0"/>
+    <details key="value" value="1.3.0"/>
   </eAnnotations>
   <eClassifiers xsi:type="ecore:EClass" name="ExtendedAddress" eSuperTypes="../../org.gecko.emf.osgi.example.model.basic/model/basic.ecore#//Address">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="asdasd" eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
@@ -15,6 +15,12 @@
   <eClassifiers xsi:type="ecore:EClass" name="AnInterface" abstract="true" interface="true"/>
   <eClassifiers xsi:type="ecore:EClass" name="InterfaceImpl" eSuperTypes="#//AnInterface"/>
   <eClassifiers xsi:type="ecore:EClass" name="InterfaceWithExtendsImpl" eSuperTypes="#//AnInterface #//ExtendedAddress"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ExtendedGeometry" eSuperTypes="../../org.gecko.emf.osgi.example.model.basic/model/basic.ecore#//Geometry">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="oneCoordinate" lowerBound="1"
+        eType="ecore:EDataType ../../org.gecko.emf.osgi.example.model.basic/model/basic.ecore#//Coordinates"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="oneMultiDimensionalCoordinate"
+        lowerBound="1" eType="ecore:EDataType ../../org.gecko.emf.osgi.example.model.basic/model/basic.ecore#//MultiDimensionCoordinates"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DocumentRoot">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="name" value=""/>
