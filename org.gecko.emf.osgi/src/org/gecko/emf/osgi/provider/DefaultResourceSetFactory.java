@@ -31,7 +31,6 @@ import java.util.concurrent.CopyOnWriteArraySet;
 import java.util.concurrent.atomic.AtomicReference;
 
 import org.eclipse.emf.ecore.EPackage;
-import org.eclipse.emf.ecore.impl.EPackageRegistryImpl;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.Resource.Factory;
 import org.eclipse.emf.ecore.resource.Resource.Factory.Registry;
@@ -324,7 +323,7 @@ public class DefaultResourceSetFactory implements ResourceSetFactory {
 			throw new IllegalStateException("There is no Resource Factory Registry available. This should not happen");
 		}
 		ResourceSet resourceSet = internalCreateResourceSet();
-		resourceSet.setPackageRegistry(new EPackageRegistryImpl(packageRegistry));
+		resourceSet.setPackageRegistry(new DelegatingEPackageRegistry(packageRegistry));
 		resourceSet.setResourceFactoryRegistry(new DelegatingResourceFactoryRegistry(rfr));
 		resourceSetConfigurators.forEach(c->c.configureResourceSet(resourceSet));
 		return resourceSet;
