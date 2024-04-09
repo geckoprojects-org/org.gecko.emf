@@ -27,6 +27,7 @@ import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
+import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.gecko.emf.osgi.configurator.EPackageConfigurator;
 import org.gecko.emf.osgi.constants.EMFNamespaces;
 import org.gecko.emf.osgi.helper.ServicePropertiesHelper;
@@ -138,6 +139,7 @@ public class DynamicPackageLoader{
 				throw new IllegalStateException("Loaded ecore with no content '" + ecoreURI + "'");
 			}
 			dynamicPackage = (EPackage) resource.getContents().get(0);
+			EcoreUtil.resolveAll(dynamicPackage);
 			resource.setURI(URI.createURI(dynamicPackage.getNsURI()));
 			resourceSet.getResources().clear();
 		} catch (IOException e) {
