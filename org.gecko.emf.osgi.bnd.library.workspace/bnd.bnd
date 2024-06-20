@@ -2,8 +2,7 @@
 -include: ${.}/buildpath.bnd	
 mavendeps: ${sjoin;\n; ${template;-maven-dependencies;${@}}}
 
--includeresource: resources,\
-	{template/geckoEMF.maven=resources/template/geckoEMF.maven}	
+-includeresource: {resources}
 	
 Provide-Capability: \
 	${gecko-base}
