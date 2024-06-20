@@ -17,6 +17,7 @@ import org.eclipse.emf.codegen.ecore.generator.GeneratorAdapterFactory;
 import org.eclipse.emf.codegen.ecore.genmodel.generator.GenModelGeneratorAdapter;
 import org.eclipse.emf.common.util.Diagnostic;
 import org.eclipse.emf.common.util.Monitor;
+import org.eclipse.emf.common.util.URI;
 
 /**
  * Used to avoid the PDE specific Files
@@ -32,6 +33,19 @@ public class GeckoGenModelGeneratorAdapter extends GenModelGeneratorAdapter {
 	 */
 	public GeckoGenModelGeneratorAdapter(GeneratorAdapterFactory generatorAdapterFactory) {
 		super(generatorAdapterFactory);
+	}
+	
+	/* 
+	 * (non-Javadoc)
+	 * @see org.eclipse.emf.codegen.ecore.generator.AbstractGeneratorAdapter#getEncoding(org.eclipse.emf.common.util.URI)
+	 */
+	@Override
+	protected String getEncoding(URI workspacePath) {
+		String encoding = super.getEncoding(workspacePath);
+		if(encoding == null) {
+			return "UTF8";
+		}
+		return encoding;
 	}
 	
 	/* 

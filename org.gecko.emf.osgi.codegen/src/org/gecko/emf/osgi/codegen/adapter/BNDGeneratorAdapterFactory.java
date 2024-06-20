@@ -30,7 +30,8 @@ public class BNDGeneratorAdapterFactory extends GenModelGeneratorAdapterFactory 
 			return new BNDGeneratorAdapterFactory();
 		};
 
-	
+		
+		
 	@Override
 	public Adapter createGenPackageAdapter() {
 		if (genPackageGeneratorAdapter == null)

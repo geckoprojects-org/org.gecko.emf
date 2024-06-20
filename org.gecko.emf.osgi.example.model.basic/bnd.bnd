@@ -23,3 +23,5 @@ src=${^src},src-gen
 		version=${base-version};\
 		clean=false;\
 		logfile=out.log
+
+-baseline: !org.gecko.emf.osgi.example.model.basic.impl
