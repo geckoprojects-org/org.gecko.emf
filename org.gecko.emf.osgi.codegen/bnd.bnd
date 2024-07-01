@@ -28,8 +28,7 @@ src=${^src}
 
 -includeresource.resource: \
 	/=resources,\
-	templates,\
-	{resources/version.properties}
+	templates
 	
 -privatepackage.add: \
 	org.eclipse.core.runtime;-split-package:=merge-first,\

@@ -19,6 +19,10 @@
     <genClasses image="false" ecoreClass="extendend.ecore#//AnInterface"/>
     <genClasses ecoreClass="extendend.ecore#//InterfaceImpl"/>
     <genClasses ecoreClass="extendend.ecore#//InterfaceWithExtendsImpl"/>
+    <genClasses ecoreClass="extendend.ecore#//ExtendedGeometry">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute extendend.ecore#//ExtendedGeometry/oneCoordinate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute extendend.ecore#//ExtendedGeometry/oneMultiDimensionalCoordinate"/>
+    </genClasses>
     <genClasses ecoreClass="extendend.ecore#//DocumentRoot">
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EAttribute extendend.ecore#//DocumentRoot/mixed"/>
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference extendend.ecore#//DocumentRoot/xMLNSPrefixMap"/>

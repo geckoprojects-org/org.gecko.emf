@@ -8,8 +8,8 @@
     operationReflection="true" importOrganizing="true" oSGiCompatible="true">
   <foreignModel>basic.ecore</foreignModel>
   <genPackages prefix="Basic" basePackage="org.gecko.emf.osgi.example.model" resource="XMI"
-      disposableProviderFactory="true" loadInitialization="true" contentTypeIdentifier="basic#1.0"
-      fileExtensions="basic" ecorePackage="basic.ecore#/">
+      disposableProviderFactory="true" contentTypeIdentifier="basic#1.0" fileExtensions="basic"
+      ecorePackage="basic.ecore#/">
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="basic.ecore#//ContactType">
       <genEnumLiterals ecoreEnumLiteral="basic.ecore#//ContactType/PHONE"/>
       <genEnumLiterals ecoreEnumLiteral="basic.ecore#//ContactType/MOBILE"/>
@@ -17,6 +17,7 @@
       <genEnumLiterals ecoreEnumLiteral="basic.ecore#//ContactType/EMAIL"/>
       <genEnumLiterals ecoreEnumLiteral="basic.ecore#//ContactType/SKYPE"/>
       <genEnumLiterals ecoreEnumLiteral="basic.ecore#//ContactType/WEBADDRESS"/>
+      <genEnumLiterals ecoreEnumLiteral="basic.ecore#//ContactType/nööö"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="basic.ecore#//ContactContextType">
       <genEnumLiterals ecoreEnumLiteral="basic.ecore#//ContactContextType/HOME"/>
@@ -110,6 +111,9 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute basic.ecore#//Geometry/coordinates"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute basic.ecore#//Geometry/id"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute basic.ecore#//Geometry/multiDimensionalCoordinates"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="basic.ecore#//SuppressWarnings">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute basic.ecore#//SuppressWarnings/value"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

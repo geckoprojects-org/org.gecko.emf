@@ -38,18 +38,16 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
+import org.eclipse.emf.ecore.resource.impl.BinaryResourceImpl.BinaryIO.Version;
+import org.eclipse.emf.ecore.resource.impl.BinaryResourceImpl.EObjectOutputStream;
 import org.eclipse.emf.ecore.resource.impl.ResourceFactoryImpl;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
-import org.eclipse.emf.ecore.resource.impl.BinaryResourceImpl.EObjectOutputStream;
-import org.eclipse.emf.ecore.resource.impl.BinaryResourceImpl.BinaryIO.Version;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.xmi.XMLResource;
-import org.eclipse.emf.ecore.xmi.XMLResource.URIHandler;
 import org.eclipse.emf.ecore.xmi.impl.EcoreResourceFactoryImpl;
 import org.eclipse.emf.ecore.xmi.impl.URIHandlerImpl;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceImpl;
 import org.gecko.emf.osgi.codegen.GeckoEmfGenerator;
-import org.gecko.emf.osgi.codegen.ResourceUriHandler;
 
 /**
  * EMF codegen generator adapter that is responsible to generate the OSGi
@@ -94,6 +92,19 @@ public class GeckoGenPackageGeneratorAdapter extends GenPackageGeneratorAdapter 
 		super(generatorAdapterFactory);
 	}
 
+	/* 
+	 * (non-Javadoc)
+	 * @see org.eclipse.emf.codegen.ecore.generator.AbstractGeneratorAdapter#getEncoding(org.eclipse.emf.common.util.URI)
+	 */
+	@Override
+	protected String getEncoding(URI workspacePath) {
+		String encoding = super.getEncoding(workspacePath);
+		if(encoding == null) {
+			return "UTF8";
+		}
+		return encoding;
+	}
+	
 	/**
 	 * Returns the set of <code>JETEmitterDescriptor</code>s used by the adapter.
 	 * The contents of the returned array should never be changed. Rather,

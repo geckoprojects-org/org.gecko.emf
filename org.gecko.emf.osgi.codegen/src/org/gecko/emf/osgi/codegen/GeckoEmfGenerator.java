@@ -25,7 +25,6 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
-import java.util.Properties;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 import org.eclipse.core.runtime.IProgressMonitor;
@@ -78,8 +77,6 @@ public class GeckoEmfGenerator implements Generator<GeneratorOptions> {
 	/** PROP_LOGFILE */
 	private static final String PROP_LOGFILE = "logfile"; //$NON-NLS-1$
 
-	
-	
 	private static PrintStream logWriter;
 
 	public static void info(String message) {
@@ -131,12 +128,7 @@ public class GeckoEmfGenerator implements Generator<GeneratorOptions> {
 				initializeLog(context.getBase(), context.get(PROP_LOGFILE));
 			}
 			
-			Properties props = new Properties();
-			props.load(getClass().getResourceAsStream("/version.properties"));
-			
-			String version = props.getProperty("version");
-			
-			info("Running Gecko EMF Codegen Version " + version);
+			info("Running Gecko EMF Codegen Version " + VersionConstant.GECKOPROJECTS_EMF_VERSION);
 			
 			String genFolder = context.get(PROP_OUTPUT);
 			File output = null;
@@ -288,50 +280,54 @@ public class GeckoEmfGenerator implements Generator<GeneratorOptions> {
 	protected Optional<String> doGenerate(String output, String genmodelPath, Map<Container, Map<String, String>> refModels, File base, String bsn, String genmodelLocation) {
 		info("Running for genmodel " + genmodelPath + " in " + base.getAbsolutePath()); 
 		ResourceSet resourceSet = new ResourceSetImpl();
-
-		configureEMF(resourceSet, refModels, bsn, base);
-		URI genModelUri = URI.createURI("resource://" + bsn + "/" + genmodelPath);
-		
-		info("Loading " + genModelUri.toString());
-		
-		Resource resource = resourceSet.getResource(genModelUri, true);
-
-		if(!resource.getErrors().isEmpty()) {
-			return Optional.of(resource.getErrors().get(0).toString());
-		}
-
-		GenModel genModel = (GenModel) resource.getContents().get(0);
-		org.eclipse.emf.codegen.ecore.generator.Generator gen = new org.eclipse.emf.codegen.ecore.generator.Generator();
-		configureEMFGenerator(gen);
-		
-		String modelDirectory = "/" + bsn + (output.startsWith("/") ? "" : "/") + output;
-
-		info("Setting modelDirectory" + modelDirectory);
-		
-		genModel.setModelDirectory(modelDirectory);
-		gen.setInput(genModel);
-		
-		
-		Map<String, Object> props = new HashMap<>();
-		props.put(GeckoEmfGenerator.ORIGINAL_GEN_MODEL_PATH, genmodelPath);
-		props.put(GeckoEmfGenerator.ORIGINAL_GEN_MODEL_PATHS_EXTRA, Arrays.asList(base.getName() + "/" + genmodelPath));
-		props.put(GeckoEmfGenerator.INCLUDE_GEN_MODEL_FOLDER, genmodelLocation);
-		gen.getOptions().data = new Object[] {props};
-		
-		genModel.setCanGenerate(true);
-		genModel.setUpdateClasspath(false);
-
-		info("Starting generator run");
 		try {
-			Diagnostic diagnostic = gen.generate(genModel, GenBaseGeneratorAdapter.MODEL_PROJECT_TYPE, CodeGenUtil.EclipseUtil.createMonitor(new LoggingProgressMonitor(), 1));
-			printResult(diagnostic);
-			if(diagnostic.getSeverity() != Diagnostic.OK) {
-				return Optional.of(diagnostic.toString());
-			} 
-		} catch (Exception e) {
-			String message = "An error appeared while generating: " + e.getMessage();
-			error(message, e);
-			return Optional.of(message);
+			configureEMF(resourceSet, refModels, bsn, base);
+			URI genModelUri = URI.createURI("resource://" + bsn + "/" + genmodelPath);
+			
+			info("Loading " + genModelUri.toString());
+			
+			Resource resource = resourceSet.getResource(genModelUri, true);
+			
+			if(!resource.getErrors().isEmpty()) {
+				return Optional.of(resource.getErrors().get(0).toString());
+			}
+			
+			GenModel genModel = (GenModel) resource.getContents().get(0);
+			org.eclipse.emf.codegen.ecore.generator.Generator gen = new org.eclipse.emf.codegen.ecore.generator.Generator();
+			configureEMFGenerator(gen);
+			
+			String modelDirectory = "/" + bsn + (output.startsWith("/") ? "" : "/") + output;
+			
+			info("Setting modelDirectory" + modelDirectory);
+			
+			genModel.setModelDirectory(modelDirectory);
+			gen.setInput(genModel);
+			
+			
+			Map<String, Object> props = new HashMap<>();
+			props.put(GeckoEmfGenerator.ORIGINAL_GEN_MODEL_PATH, genmodelPath);
+			props.put(GeckoEmfGenerator.ORIGINAL_GEN_MODEL_PATHS_EXTRA, Arrays.asList(base.getName() + "/" + genmodelPath));
+			props.put(GeckoEmfGenerator.INCLUDE_GEN_MODEL_FOLDER, genmodelLocation);
+			gen.getOptions().data = new Object[] {props};
+			
+			genModel.setCanGenerate(true);
+			genModel.setUpdateClasspath(false);
+			
+			info("Starting generator run");
+			try {
+				Diagnostic diagnostic = gen.generate(genModel, GenBaseGeneratorAdapter.MODEL_PROJECT_TYPE, CodeGenUtil.EclipseUtil.createMonitor(new LoggingProgressMonitor(), 1));
+				printResult(diagnostic);
+				if(diagnostic.getSeverity() != Diagnostic.OK) {
+					return Optional.of(diagnostic.toString());
+				} 
+			} catch (Exception e) {
+				String message = "An error appeared while generating: " + e.getMessage();
+				error(message, e);
+				return Optional.of(message);
+			}
+		} finally {
+			resourceSet.getResources().forEach(Resource::unload);
+			resourceSet.getResources().clear();
 		}
 		return Optional.empty();
 	}

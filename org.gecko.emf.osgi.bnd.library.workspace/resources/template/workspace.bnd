@@ -2,8 +2,8 @@
 	aQute.bnd.repository.maven.provider.MavenBndRepository;\
 		releaseUrl			= "https://repo.maven.apache.org/maven2/,https://devel.data-in-motion.biz/nexus/repository/dim-release/"; \
 		snapshotUrl			= "https://devel.data-in-motion.biz/nexus/repository/dim-snapshot/";\
-		index            = "${.}/geckoEMF.maven" ;\
+		index            = "\${.}/geckoEMF.maven" ;\
 		readOnly            = true;\
-		name="GeckoEMF Dependencies"
+		name="GeckoEMF Dependencies - ${project-version}"
 		
 -require-bnd: "(version>=7.0.0)"
