@@ -20,7 +20,9 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.StringJoiner;
@@ -46,6 +48,7 @@ public class ResourceUriHandler implements URIHandler {
 
 	
 	private final Map<Container, Map<String, String>> buildPathModels;
+	private final List<String> uriCache = new ArrayList<String>();
 	private String bsn;
 	private File base;
 	private URI basePath;
@@ -71,7 +74,10 @@ public class ResourceUriHandler implements URIHandler {
 		GeckoEmfGenerator.info("    buildPath:");
 		refModels.forEach((c, r) -> {
 			GeckoEmfGenerator.info("      Container: " + c);
-			r.forEach((k,v) -> GeckoEmfGenerator.info("        |->: " + k + " - " + v));
+			r.forEach((k,v) -> {
+				GeckoEmfGenerator.info("        |->: " + k + " - " + v);
+				uriCache.add(k);
+			});
 		});
 		
 	}
@@ -79,7 +85,7 @@ public class ResourceUriHandler implements URIHandler {
 	@Override
 	public boolean canHandle(URI uri) {
 		GeckoEmfGenerator.info("Asked to handle " + uri); //$NON-NLS-1$
-		return uri.scheme().equals(UriSanatizer.RESOURCE_SCHEMA_NAME) || uri.toString().startsWith(UriSanatizer.PLATFORM_RESOURCE) || uri.toString().startsWith(UriSanatizer.PLATFORM_PLUGIN); 
+		return uriCache.contains(uri.trimFragment().trimQuery().toString()) || uri.scheme().equals(UriSanatizer.RESOURCE_SCHEMA_NAME) || uri.toString().startsWith(UriSanatizer.PLATFORM_RESOURCE) || uri.toString().startsWith(UriSanatizer.PLATFORM_PLUGIN); 
 	}
 
 	
@@ -87,6 +93,15 @@ public class ResourceUriHandler implements URIHandler {
 	@Override
 	public InputStream createInputStream(URI uri, Map<?, ?> options) throws IOException {
 		GeckoEmfGenerator.info("Asked to open InputStream for " + uri); //$NON-NLS-1$
+		
+		GeckoEmfGenerator.info("Looking for the pure URI"); //$NON-NLS-1$
+		for (Entry<Container, Map<String, String>> entry : buildPathModels.entrySet()) {
+			String ecore = entry.getValue().get(uri.trimFragment().trimQuery().toString());
+			if(ecore != null) {
+				Container c = entry.getKey();
+				getInputStreamFromContainer(c, ecore);
+			}
+		}
 		
 		URI theUri = UriSanatizer.trimmedSanitize(uri);
 		if (theUri == null) {
@@ -117,17 +132,7 @@ public class ResourceUriHandler implements URIHandler {
 					String testUri = UriSanatizer.SCHEMA_RESOURCE + containerBSN + UriSanatizer.SLASH + path;
 					GeckoEmfGenerator.info("comparing URIs " + testUri + " with the requested " + theUri); //$NON-NLS-1$ //$NON-NLS-2$
 					if(testUri.equals(theUri.toString())) {
-						try(Jar jar = new Jar(c.getFile())){
-							Resource resource = jar.getResource(paths.getValue());
-							if(resource != null) {
-								try {
-									byte[] data = IO.read(resource.openInputStream());
-									return new ByteArrayInputStream(data);
-								} catch (Exception e) {
-									Exceptions.duck(e);
-								}
-							}
-						}
+						return getInputStreamFromContainer(c, paths.getValue());
 					}
 				}
 			}
@@ -151,6 +156,24 @@ public class ResourceUriHandler implements URIHandler {
 		}
 		GeckoEmfGenerator.error("Nothing Helped. We have been unable to find anything for " + uri);  //$NON-NLS-1$//$NON-NLS-2$
 		
+		return null;
+	}
+
+	private InputStream getInputStreamFromContainer(Container container, String path) throws IOException {
+		if(path.startsWith(UriSanatizer.SLASH)) {
+			path = path.substring(1);
+		}
+		try(Jar jar = new Jar(container.getFile())){
+			Resource resource = jar.getResource(path);
+			if(resource != null) {
+				try {
+					byte[] data = IO.read(resource.openInputStream());
+					return new ByteArrayInputStream(data);
+				} catch (Exception e) {
+					Exceptions.duck(e);
+				}
+			}
+		}
 		return null;
 	}
 

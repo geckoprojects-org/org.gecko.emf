@@ -221,6 +221,10 @@ public class GeckoEmfGenerator implements Generator<GeneratorOptions> {
 						ecoreSourceLocations.forEach(l -> result.put(l, ecoreLocation));
 					}
 					result.put(ecoreLocation, ecoreLocation);
+					String uri = (String) capability.getAttributes().get("uri");
+					if(uri != null) {
+						result.put(uri, ecoreLocation);
+					}
 				} 
 				refModels.put(c, result);
 				try (Jar jar = new Jar(f)){
