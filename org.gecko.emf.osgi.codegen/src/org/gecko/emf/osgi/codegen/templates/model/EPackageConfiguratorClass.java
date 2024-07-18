@@ -37,12 +37,14 @@ public class EPackageConfiguratorClass
   protected final String TEXT_20 = ".eNAME);" + NL + "\t\tproperties.put(";
   protected final String TEXT_21 = ".EMF_MODEL_NSURI, ";
   protected final String TEXT_22 = ".eNS_URI);" + NL + "\t\tproperties.put(";
-  protected final String TEXT_23 = ".EMF_MODEL_FILE_EXT, \"";
-  protected final String TEXT_24 = "\");";
-  protected final String TEXT_25 = NL + "\t\tproperties.put(";
-  protected final String TEXT_26 = ".EMF_MODEL_CONTENT_TYPE, \"";
-  protected final String TEXT_27 = ".EMF_MODEL_VERSION, \"";
-  protected final String TEXT_28 = "\");" + NL + "\t\treturn properties;" + NL + "\t}" + NL + "}";
+  protected final String TEXT_23 = ".EMF_MODEL_REGISTRATION, ";
+  protected final String TEXT_24 = ".MODEL_REGISTRATION_PROVIDED);" + NL + "\t\tproperties.put(";
+  protected final String TEXT_25 = ".EMF_MODEL_FILE_EXT, \"";
+  protected final String TEXT_26 = "\");";
+  protected final String TEXT_27 = NL + "\t\tproperties.put(";
+  protected final String TEXT_28 = ".EMF_MODEL_CONTENT_TYPE, \"";
+  protected final String TEXT_29 = ".EMF_MODEL_VERSION, \"";
+  protected final String TEXT_30 = "\");" + NL + "\t\treturn properties;" + NL + "\t}" + NL + "}";
 
   public String generate(Object argument)
   {
@@ -96,20 +98,24 @@ public class EPackageConfiguratorClass
     stringBuffer.append(TEXT_22);
     stringBuffer.append(genModel.getImportedName("org.gecko.emf.osgi.constants.EMFNamespaces"));
     stringBuffer.append(TEXT_23);
+    stringBuffer.append(genModel.getImportedName("org.gecko.emf.osgi.constants.EMFNamespaces"));
+    stringBuffer.append(TEXT_24);
+    stringBuffer.append(genModel.getImportedName("org.gecko.emf.osgi.constants.EMFNamespaces"));
+    stringBuffer.append(TEXT_25);
     stringBuffer.append(genPackage.getFileExtension());
-    stringBuffer.append(TEXT_24);
-     if (genPackage.getContentTypeIdentifier() != null) {
-    stringBuffer.append(TEXT_25);
-    stringBuffer.append(genModel.getImportedName("org.gecko.emf.osgi.constants.EMFNamespaces"));
     stringBuffer.append(TEXT_26);
-    stringBuffer.append(genPackage.getContentTypeIdentifier());
-    stringBuffer.append(TEXT_24);
-    }
-    stringBuffer.append(TEXT_25);
-    stringBuffer.append(genModel.getImportedName("org.gecko.emf.osgi.constants.EMFNamespaces"));
+     if (genPackage.getContentTypeIdentifier() != null) {
     stringBuffer.append(TEXT_27);
-    stringBuffer.append(GeneratorHelper.getVersion(genPackage));
+    stringBuffer.append(genModel.getImportedName("org.gecko.emf.osgi.constants.EMFNamespaces"));
     stringBuffer.append(TEXT_28);
+    stringBuffer.append(genPackage.getContentTypeIdentifier());
+    stringBuffer.append(TEXT_26);
+    }
+    stringBuffer.append(TEXT_27);
+    stringBuffer.append(genModel.getImportedName("org.gecko.emf.osgi.constants.EMFNamespaces"));
+    stringBuffer.append(TEXT_29);
+    stringBuffer.append(GeneratorHelper.getVersion(genPackage));
+    stringBuffer.append(TEXT_30);
     genModel.emitSortedImports();
     return stringBuffer.toString();
   }

@@ -207,6 +207,7 @@ public class ModelHelper {
 				String nsUri = ePackage.getNsURI();
 				serviceProperties.put(EMFNamespaces.EMF_MODEL_NAME, ePackage.getName());
 				serviceProperties.put(EMFNamespaces.EMF_MODEL_NSURI, nsUri);
+				serviceProperties.put(EMFNamespaces.EMF_MODEL_REGISTRATION, EMFNamespaces.MODEL_REGISTRATION_EXTENDER);
 				return new Model(ePackage, url, serviceProperties, bundleId);
 			}
 			return null;

@@ -13,6 +13,7 @@
  */
 package org.gecko.emf.osgi.extender.itest;
 
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertNull;
@@ -32,6 +33,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.osgi.framework.BundleContext;
 import org.osgi.framework.ServiceReference;
+import org.osgi.test.assertj.dictionary.DictionaryAssert;
 import org.osgi.test.common.annotation.InjectBundleContext;
 import org.osgi.test.common.annotation.InjectService;
 import org.osgi.test.common.service.ServiceAware;
@@ -79,6 +81,14 @@ public class EMFModelExtenderTest {
 		assertNotNull(foo);
 		EClass bar = (EClass) ePackage.getEClassifier("Bar");
 		assertNull(bar);
+	}
+	
+	@Test
+	public void simpleTestEPackageRegistrationProperty(@InjectService(filter = "(" + EMFNamespaces.EMF_MODEL_NAME + "=manual)") ServiceAware<EPackage> epackageAware) {
+		assertNotNull(epackageAware);
+		assertThat(epackageAware.isEmpty()).isFalse();
+		DictionaryAssert.assertThat(epackageAware.getServiceReference().getProperties()).containsKey(EMFNamespaces.EMF_MODEL_REGISTRATION)	
+		.extractingByKey(EMFNamespaces.EMF_MODEL_REGISTRATION).isEqualTo(EMFNamespaces.MODEL_REGISTRATION_EXTENDER);
 	}
 	
 	@Test

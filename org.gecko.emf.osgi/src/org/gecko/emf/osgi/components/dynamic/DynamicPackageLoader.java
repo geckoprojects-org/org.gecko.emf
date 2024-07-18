@@ -162,6 +162,7 @@ public class DynamicPackageLoader{
 		Dictionary<String, Object> props = new Hashtable<>();
 		props.put(EMFNamespaces.EMF_MODEL_NAME, dynamicPackage.getName());
 		props.put(EMFNamespaces.EMF_MODEL_NSURI, dynamicPackage.getNsURI());
+		props.put(EMFNamespaces.EMF_MODEL_REGISTRATION, EMFNamespaces.MODEL_REGISTRATION_DYNAMIC);
 		if (config.feature().length > 0) {
 			props.put(EMFNamespaces.EMF_MODEL_FEATURE, config.feature());
 		}

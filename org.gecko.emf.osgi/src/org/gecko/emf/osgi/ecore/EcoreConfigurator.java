@@ -81,6 +81,7 @@ public class EcoreConfigurator implements EPackageConfigurator, ResourceFactoryC
 				"bin")); 
 		result.put(EMFNamespaces.EMF_MODEL_VERSION, "1.0.0");
 		result.put(EMFNamespaces.EMF_MODEL_NAME, ECORE);
+		result.put(EMFNamespaces.EMF_MODEL_REGISTRATION, EMFNamespaces.MODEL_REGISTRATION_INTERNAL);
 		result.put(EMFNamespaces.EMF_MODEL_NSURI, Arrays.asList( 
 				XMLTypePackage.eNS_URI,
 				XMLNamespacePackage.eNS_URI,

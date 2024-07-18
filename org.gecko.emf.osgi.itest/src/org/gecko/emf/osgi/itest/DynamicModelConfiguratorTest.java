@@ -73,9 +73,10 @@ public class DynamicModelConfiguratorTest {
 	 */
 	@Test
 	public void testCreateDynamicModel(
-			@InjectService(cardinality = 1) ServiceAware<ResourceSetFactory> resourceSetFactory
+			@InjectService(cardinality = 1) ServiceAware<ResourceSetFactory> resourceSetFactory, @InjectService(cardinality = 0, filter = "(" + EMFNamespaces.EMF_MODEL_NAME + "=manual)") ServiceAware<EPackage> manualAware
 		) throws Exception {
 
+		assertThat(manualAware.isEmpty()).isTrue();
 		assertThat(resourceSetFactory.getServices()).hasSize(1);
 		ServiceReference<ResourceSetFactory> reference = resourceSetFactory.getServiceReference();
 		assertThat(reference).isNotNull();
@@ -116,6 +117,9 @@ public class DynamicModelConfiguratorTest {
 					assertThat(arr).contains("ecore", "manual");
 				});
 
+		assertThat(manualAware.isEmpty()).isFalse();
+		DictionaryAssert.assertThat(manualAware.getServiceReference().getProperties()).containsKey(EMFNamespaces.EMF_MODEL_REGISTRATION)	
+			.extractingByKey(EMFNamespaces.EMF_MODEL_REGISTRATION).isEqualTo(EMFNamespaces.MODEL_REGISTRATION_DYNAMIC);
 		ResourceSetFactory factory = resourceSetFactory.getService();
 		assertNotNull(factory);
 		ResourceSet rs = factory.createResourceSet();
