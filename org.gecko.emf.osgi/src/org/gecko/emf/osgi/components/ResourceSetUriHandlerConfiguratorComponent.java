@@ -46,6 +46,9 @@ public class ResourceSetUriHandlerConfiguratorComponent implements ResourceSetCo
 	private Set<UriHandlerProvider> handlerProviders = new CopyOnWriteArraySet<>();
 	private Set<UriMapProvider> mapProviders = new CopyOnWriteArraySet<>();
 
+	public ResourceSetUriHandlerConfiguratorComponent() {
+		handlerProviders.add(new RestUriHandlerProvider());
+	}
 
 	@Override
 	public void configureResourceSet(ResourceSet resourceSet) {
