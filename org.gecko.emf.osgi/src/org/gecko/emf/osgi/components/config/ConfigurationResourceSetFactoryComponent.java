@@ -31,6 +31,7 @@ import org.gecko.emf.osgi.configurator.ResourceSetConfigurator;
 import org.gecko.emf.osgi.constants.EMFNamespaces;
 import org.gecko.emf.osgi.constants.VersionConstant;
 import org.gecko.emf.osgi.ecore.EcoreConfigurator;
+import org.gecko.emf.osgi.ecore.EcorePackagesRegistrator;
 import org.gecko.emf.osgi.provider.DefaultResourceSetFactory;
 import org.osgi.annotation.bundle.Capability;
 import org.osgi.annotation.versioning.ProviderType;
@@ -92,6 +93,7 @@ public class ConfigurationResourceSetFactoryComponent extends DefaultResourceSet
 		EcoreConfigurator ecoreConfigurator = new EcoreConfigurator();
 		addEPackageConfigurator(ecoreConfigurator, EcoreConfigurator.PROPERTIES);
 		addResourceFactoryConfigurator(ecoreConfigurator, EcoreConfigurator.PROPERTIES);
+		EcorePackagesRegistrator.start();
 	}
 	
 	/*
@@ -123,6 +125,7 @@ public class ConfigurationResourceSetFactoryComponent extends DefaultResourceSet
 		if (rfr != null) {
 			this.resourceFactoryRegistryObjects.ungetService(rfr);
 		}
+		EcorePackagesRegistrator.stop();
 	}
 
 	protected void unsetRegistry(org.eclipse.emf.ecore.EPackage.Registry registry) {

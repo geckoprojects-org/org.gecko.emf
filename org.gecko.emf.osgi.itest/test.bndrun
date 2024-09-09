@@ -38,3 +38,11 @@
 	bnd.identity;id='org.gecko.emf.osgi.component.config',\
 	bnd.identity;id='org.gecko.emf.osgi.component.minimal'
 -runvm: -DecoreBase=${.}
+-runrepos: \
+	local,\
+	Central,\
+	Release,\
+	DIM_Release,\
+	Jacoco Dependencies,\
+	OSGi-Test Dependencies,\
+	Workspace

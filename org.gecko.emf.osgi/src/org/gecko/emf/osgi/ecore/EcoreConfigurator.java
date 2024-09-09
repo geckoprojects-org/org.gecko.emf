@@ -53,13 +53,13 @@ import org.osgi.framework.Constants;
 public class EcoreConfigurator implements EPackageConfigurator, ResourceFactoryConfigurator {
 
 	/** OCTET_STREAM */
-	private static final String OCTET_STREAM = "application/octet-stream";
+	protected static final String OCTET_STREAM = "application/octet-stream";
 	/** APPLICATION_XMI */
-	private static final String APPLICATION_XMI = "application/xmi";
+	protected static final String APPLICATION_XMI = "application/xmi";
 	/** EMF_EMOF */
-	private static final String EMF_EMOF = "org.eclipse.emf.emof";
+	protected static final String EMF_EMOF = "org.eclipse.emf.emof";
 	/** EMF_ECORE */
-	private static final String EMF_ECORE = "org.eclipse.emf.ecore";
+	protected static final String EMF_ECORE = EcorePackage.eCONTENT_TYPE;
 	/** ECORE */
 	private static final String ECORE = "ecore";
 	public static final Map<String, Object> PROPERTIES = EcoreConfigurator.getProperties();
@@ -94,7 +94,7 @@ public class EcoreConfigurator implements EPackageConfigurator, ResourceFactoryC
 	}
 			
 	
-	private static Resource.Factory binaryFactory = new ResourceFactoryImpl(){
+	protected static Resource.Factory binaryFactory = new ResourceFactoryImpl(){
 		@Override
 		public Resource createResource(URI uri) {
 			return new BinaryResourceImpl(uri);

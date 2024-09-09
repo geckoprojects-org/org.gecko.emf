@@ -83,7 +83,7 @@ public class IsolatedResourceSetFactoryIntegrationTest {
 		Dictionary<String, Object> properties = new Hashtable<>();
 		properties.put("rsf.name", "test");
 		properties.put("rsf.model.target.filter", "(" + EMFNamespaces.EMF_MODEL_NAME + "=*)");
-
+		
 		AtomicReference<Configuration> cr = new AtomicReference<>();
 		MonitoringAssertion.executeAndObserve(() -> {
 			Configuration configuration = ca.getConfiguration(EMFNamespaces.ISOLATED_RESOURCE_SET_FACTORY_CONFIG_NAME,
