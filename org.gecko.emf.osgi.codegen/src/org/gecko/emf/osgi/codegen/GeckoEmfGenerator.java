@@ -40,6 +40,8 @@ import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
+import org.eclipse.emf.ecore.util.Diagnostician;
+import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 import org.gecko.emf.osgi.annotation.provide.EPackage;
 import org.gecko.emf.osgi.codegen.GeckoEmfGenerator.GeneratorOptions;
@@ -264,6 +266,7 @@ public class GeckoEmfGenerator implements Generator<GeneratorOptions> {
 
 		GenModelPackageImpl.init();
 		GenModelFactoryImpl.init();
+		org.eclipse.uml2.codegen.ecore.genmodel.impl.GenModelPackageImpl.init();
 
 		resourceSet.getURIConverter().getURIHandlers().add(0, new ResourceUriHandler(refModels, bsn, base));
 		resourceSet.getResourceFactoryRegistry().getContentTypeToFactoryMap().put(GenModelPackage.eCONTENT_TYPE, new XMIResourceFactoryImpl());
@@ -297,6 +300,14 @@ public class GeckoEmfGenerator implements Generator<GeneratorOptions> {
 			}
 			
 			GenModel genModel = (GenModel) resource.getContents().get(0);
+			info("Resolving all Models");
+			EcoreUtil.resolveAll(genModel);
+			Diagnostic genModelDiagnostic = Diagnostician.INSTANCE.validate(genModel);
+			if (genModelDiagnostic.getSeverity() != Diagnostic.OK) {
+				error("Genmodel is invalid");
+				printResult(genModelDiagnostic, "");
+				return Optional.empty();
+			}
 			org.eclipse.emf.codegen.ecore.generator.Generator gen = new org.eclipse.emf.codegen.ecore.generator.Generator();
 			configureEMFGenerator(gen);
 			
@@ -343,9 +354,7 @@ public class GeckoEmfGenerator implements Generator<GeneratorOptions> {
 		printResult(diagnostic, ""); //$NON-NLS-1$
 	}
 	private void printResult(Diagnostic diagnostic, String prefix) {
-		if(diagnostic.getSeverity() == Diagnostic.OK) {
-			info(prefix + diagnostic.getMessage() + " - " + diagnostic.getSource()); //$NON-NLS-1$
-		} else {
+		if(diagnostic.getSeverity() != Diagnostic.OK) {
 			error(prefix + diagnostic.getMessage() + " - " + diagnostic.getSource()); //$NON-NLS-1$
 			if(diagnostic.getException() != null) {
 				error(prefix, diagnostic.getException());

@@ -7,7 +7,6 @@ biz.aQute.bnd:biz.aQute.bndlib:7.0.0
 biz.aQute.bnd:biz.aQute.bnd.javagen:7.0.0
 biz.aQute.bnd:biz.aQute.bnd.annotation:7.0.0
 biz.aQute.bnd:biz.aQute.bnd.util:7.0.0
-biz.aQute.bnd:biz.aQute.repository:7.0.0
 
 org.apache.felix:org.apache.felix.cm.json:2.0.0
 org.apache.felix:org.apache.felix.configadmin:1.9.26

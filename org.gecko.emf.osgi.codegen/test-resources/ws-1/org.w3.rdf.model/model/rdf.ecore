@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="rdf" nsURI="http://www.w3.org/1999/02/22-rdf-syntax-ns#" nsPrefix="rdf">
+  <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+    <details key="documentation" value="This library models the elements in the RDF namespace, http://www.w3.org/1999/02/22-rdf-syntax-ns, for use in vocabulary development."/>
+  </eAnnotations>
+  <eClassifiers xsi:type="ecore:EClass" name="RDFList" eSuperTypes="rdfs.ecore#//RDFResource">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="The class of RDF Lists."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rest" ordered="false" upperBound="-1"
+        eType="#//Rest" eOpposite="#//Rest/parent"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="first" ordered="false"
+        eType="#//First" eOpposite="#//First/parent"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Rest" eSuperTypes="#//RDFList">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="The rest of the subject RDF list after the first item."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parent" ordered="false"
+        lowerBound="1" eType="#//RDFList" eOpposite="#//RDFList/rest"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Alt" eSuperTypes="rdfs.ecore#//RDFContainer">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="The class of containers of alternatives."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Bag" eSuperTypes="rdfs.ecore#//RDFContainer">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="The class of unordered containers."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="IRI">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="iri" ordered="false" lowerBound="1"
+        eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//String"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RDFSubject">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="The subject of the subject RDF statement."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="statement" ordered="false"
+        lowerBound="1" eType="#//RDFStatement" eOpposite="#//RDFStatement/subject"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RDFStatement" eSuperTypes="rdfs.ecore#//RDFResource">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="The class of RDF statements."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="predicate" ordered="false"
+        lowerBound="1" eType="#//RDFPredicate" eOpposite="#//RDFPredicate/statement"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="object" ordered="false"
+        lowerBound="1" eType="#//RDFObject" eOpposite="#//RDFObject/statement"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="subject" ordered="false"
+        lowerBound="1" eType="#//RDFSubject" eOpposite="#//RDFSubject/statement"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="PrimitiveLiteral" instanceClassName="java.lang.String"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RDFPredicate">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="The predicate of the subject RDF statement."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="statement" ordered="false"
+        lowerBound="1" eType="#//RDFStatement" eOpposite="#//RDFStatement/predicate"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RDFType">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="The subject is an instance of a class."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="resource" ordered="false"
+        lowerBound="1" eType="ecore:EClass rdfs.ecore#//RDFResource" eOpposite="rdfs.ecore#//RDFResource/rdfType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" ordered="false" lowerBound="1"
+        eType="ecore:EClass rdfs.ecore#//RDFClass"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RDFValue">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Idiomatic property used for structured values. (Not recommended for use.)"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="resource" ordered="false"
+        lowerBound="1" eType="ecore:EClass rdfs.ecore#//RDFResource"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="value" ordered="false"
+        upperBound="-1" eType="ecore:EClass rdfs.ecore#//RDFResource"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="First">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="The first item in the subject RDF list."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parent" ordered="false"
+        lowerBound="1" eType="#//RDFList" eOpposite="#//RDFList/first"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="first" ordered="false"
+        eType="ecore:EClass rdfs.ecore#//RDFResource"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Seq" eSuperTypes="rdfs.ecore#//RDFContainer">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="The class of ordered containers."/>
+    </eAnnotations>
+    <eOperations name="unnamed5" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="ordered"/>
+      </eAnnotations>
+      <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+        </eAnnotations>
+      </eParameters>
+      <eParameters name="context">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The cache of context-specific information."/>
+        </eAnnotations>
+        <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap">
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+        </eGenericType>
+      </eParameters>
+    </eOperations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RDFObject">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="The object of the subject RDF statement."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="statement" ordered="false"
+        lowerBound="1" eType="#//RDFStatement" eOpposite="#//RDFStatement/object"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RDFURI" eSuperTypes="#//IRI"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RDFProperty" eSuperTypes="rdfs.ecore#//RDFResource">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="The class of RDF properties."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="domain" ordered="false"
+        lowerBound="1" eType="ecore:EClass rdfs.ecore#//Domain"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="subPropertyOf" ordered="false"
+        lowerBound="1" eType="ecore:EClass rdfs.ecore#//SubPropertyOf" eOpposite="rdfs.ecore#//SubPropertyOf/property"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="range" ordered="false"
+        lowerBound="1" eType="ecore:EClass rdfs.ecore#//Range"/>
+  </eClassifiers>
+  <eSubpackages name="AuxiliaryElements" nsURI="http:///rdf/AuxiliaryElements.ecore"
+      nsPrefix="rdf.AuxiliaryElements">
+    <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <details key="originalName" value="Auxiliary Elements"/>
+    </eAnnotations>
+    <eSubpackages name="Comments" nsURI="http:///rdf/AuxiliaryElements/Comments.ecore"
+        nsPrefix="rdf.AuxiliaryElements.Comments"/>
+    <eSubpackages name="Labels" nsURI="http:///rdf/AuxiliaryElements/Labels.ecore"
+        nsPrefix="rdf.AuxiliaryElements.Labels"/>
+    <eSubpackages name="URIReferences" nsURI="http:///rdf/AuxiliaryElements/URIReferences.ecore"
+        nsPrefix="rdf.AuxiliaryElements.URIReferences">
+      <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <details key="originalName" value="URI References"/>
+      </eAnnotations>
+    </eSubpackages>
+  </eSubpackages>
+</ecore:EPackage>

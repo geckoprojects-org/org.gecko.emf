@@ -33,7 +33,7 @@ import org.junit.jupiter.api.Test;
  * @author Jürgen Albert
  * @since 14 Jan 2021
  */
-class GeckoEmfGeneratorTest {
+class UriSanatizerTest {
 	
 	@Test
 	void testURIHandlerDefault() {
@@ -138,5 +138,4 @@ class GeckoEmfGeneratorTest {
 		System.out.println(sb.toString());
 		assertNotNull(uri);
 	}
-
 }
