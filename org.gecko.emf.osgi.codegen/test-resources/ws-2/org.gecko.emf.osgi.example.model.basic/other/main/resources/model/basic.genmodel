@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="Copyright (c) 2012 - 2022 Data In Motion and others.&#xA;All rights reserved. &#xA; &#xA;This program and the accompanying materials are made&#xA;available under the terms of the Eclipse Public License 2.0&#xA;which is available at https://www.eclipse.org/legal/epl-2.0/&#xA;&#xA;SPDX-License-Identifier: EPL-2.0&#xA; &#xA;Contributors:&#xA;      Data In Motion - initial API and implementation"
+    modelDirectory="/org.gecko.emf.osgi.example.model.basic/src" modelPluginID="org.gecko.emf.osgi.example.model.basic"
+    modelName="Basic" modelPluginClass="" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" bundleManifest="false" complianceLevel="8.0"
+    copyrightFields="false" usedGenPackages="../../../../../org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore"
+    operationReflection="true" importOrganizing="true" oSGiCompatible="true">
+  <foreignModel>basic.ecore</foreignModel>
+  <genPackages prefix="Basic" basePackage="org.gecko.emf.osgi.example.model" resource="XMI"
+      disposableProviderFactory="true" contentTypeIdentifier="basic#1.0" fileExtensions="basic"
+      ecorePackage="basic.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="basic.ecore#//ContactType">
+      <genEnumLiterals ecoreEnumLiteral="basic.ecore#//ContactType/PHONE"/>
+      <genEnumLiterals ecoreEnumLiteral="basic.ecore#//ContactType/MOBILE"/>
+      <genEnumLiterals ecoreEnumLiteral="basic.ecore#//ContactType/WHATSAPP"/>
+      <genEnumLiterals ecoreEnumLiteral="basic.ecore#//ContactType/EMAIL"/>
+      <genEnumLiterals ecoreEnumLiteral="basic.ecore#//ContactType/SKYPE"/>
+      <genEnumLiterals ecoreEnumLiteral="basic.ecore#//ContactType/WEBADDRESS"/>
+      <genEnumLiterals ecoreEnumLiteral="basic.ecore#//ContactType/nööö"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="basic.ecore#//ContactContextType">
+      <genEnumLiterals ecoreEnumLiteral="basic.ecore#//ContactContextType/HOME"/>
+      <genEnumLiterals ecoreEnumLiteral="basic.ecore#//ContactContextType/PRIVATE"/>
+      <genEnumLiterals ecoreEnumLiteral="basic.ecore#//ContactContextType/WORK"/>
+      <genEnumLiterals ecoreEnumLiteral="basic.ecore#//ContactContextType/T_E_S_T"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="basic.ecore#//GenderType">
+      <genEnumLiterals ecoreEnumLiteral="basic.ecore#//GenderType/FEMALE"/>
+      <genEnumLiterals ecoreEnumLiteral="basic.ecore#//GenderType/MALE"/>
+      <genEnumLiterals ecoreEnumLiteral="basic.ecore#//GenderType/OTHER"/>
+    </genEnums>
+    <genDataTypes ecoreDataType="basic.ecore#//NPE"/>
+    <genDataTypes ecoreDataType="basic.ecore#//Coordinates"/>
+    <genDataTypes ecoreDataType="basic.ecore#//MultiDimensionCoordinates"/>
+    <genClasses ecoreClass="basic.ecore#//Person">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute basic.ecore#//Person/firstName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute basic.ecore#//Person/lastName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference basic.ecore#//Person/contact"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference basic.ecore#//Person/address"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute basic.ecore#//Person/gender"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference basic.ecore#//Person/tags"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute basic.ecore#//Person/id"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference basic.ecore#//Person/properties"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute basic.ecore#//Person/bigInt"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute basic.ecore#//Person/bigDec"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute basic.ecore#//Person/image"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference basic.ecore#//Person/relatives"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference basic.ecore#//Person/transientAddress"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute basic.ecore#//Person/test"/>
+    </genClasses>
+    <genClasses ecoreClass="basic.ecore#//Address">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute basic.ecore#//Address/street"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute basic.ecore#//Address/city"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute basic.ecore#//Address/zip"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute basic.ecore#//Address/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute basic.ecore#//Address/npe"/>
+    </genClasses>
+    <genClasses ecoreClass="basic.ecore#//Contact">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute basic.ecore#//Contact/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute basic.ecore#//Contact/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute basic.ecore#//Contact/context"/>
+    </genClasses>
+    <genClasses ecoreClass="basic.ecore#//Family">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference basic.ecore#//Family/father"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference basic.ecore#//Family/mother"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference basic.ecore#//Family/children"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute basic.ecore#//Family/id"/>
+    </genClasses>
+    <genClasses ecoreClass="basic.ecore#//BusinessContact">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute basic.ecore#//BusinessContact/companyName"/>
+    </genClasses>
+    <genClasses ecoreClass="basic.ecore#//Tag">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute basic.ecore#//Tag/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute basic.ecore#//Tag/value"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference basic.ecore#//Tag/tag"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference basic.ecore#//Tag/tags"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute basic.ecore#//Tag/description"/>
+    </genClasses>
+    <genClasses ecoreClass="basic.ecore#//BusinessPerson">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute basic.ecore#//BusinessPerson/companyIdCardNumber"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference basic.ecore#//BusinessPerson/employeeInfo"/>
+    </genClasses>
+    <genClasses ecoreClass="basic.ecore#//StringStringMap">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute basic.ecore#//StringStringMap/key"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute basic.ecore#//StringStringMap/value"/>
+    </genClasses>
+    <genClasses ecoreClass="basic.ecore#//EmployeeInfo">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute basic.ecore#//EmployeeInfo/position"/>
+    </genClasses>
+    <genClasses ecoreClass="basic.ecore#//Widget">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference basic.ecore#//Widget/content"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute basic.ecore#//Widget/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute basic.ecore#//Widget/name"/>
+    </genClasses>
+    <genClasses ecoreClass="basic.ecore#//Textwidget"/>
+    <genClasses ecoreClass="basic.ecore#//Content">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute basic.ecore#//Content/name"/>
+    </genClasses>
+    <genClasses ecoreClass="basic.ecore#//HLWidget">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference basic.ecore#//HLWidget/children"/>
+    </genClasses>
+    <genClasses ecoreClass="basic.ecore#//PersonContact">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference basic.ecore#//PersonContact/contactPerson"/>
+    </genClasses>
+    <genClasses ecoreClass="basic.ecore#//PersonObject">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference basic.ecore#//PersonObject/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute basic.ecore#//PersonObject/id"/>
+    </genClasses>
+    <genClasses ecoreClass="basic.ecore#//Geometry">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute basic.ecore#//Geometry/coordinates"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute basic.ecore#//Geometry/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute basic.ecore#//Geometry/multiDimensionalCoordinates"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="basic.ecore#//SuppressWarnings">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute basic.ecore#//SuppressWarnings/value"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

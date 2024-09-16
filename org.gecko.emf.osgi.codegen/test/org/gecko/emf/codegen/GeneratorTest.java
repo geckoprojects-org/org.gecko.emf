@@ -49,7 +49,7 @@ class GeneratorTest {
 	}
 	
 	@Test
-	void testGenerator() throws Exception {
+	void testGeneratorUml() throws Exception {
 		try (Workspace workspace = getWorkspace("test-resources/ws-1")) {
 			Project project = workspace.getProject("org.w3.rdf.model");
 			assertThat(project).isNotNull();
@@ -59,6 +59,42 @@ class GeneratorTest {
 					"generate", "geckoEMF",
 					"genmodel", "model/rdf.genmodel",
 					"output", "src");
+			BuildContext bc = new BuildContext(project, attrs, List.of(), System.in, System.out, System.err);
+			GeckoEmfGenerator generator = new GeckoEmfGenerator();
+			generator.generate(bc, new GeneratorOptions() {
+				
+				@Override
+				public Map<String, String> _properties() {
+					// TODO Auto-generated method stub
+					return null;
+				}
+				
+				@Override
+				public List<String> _arguments() {
+					// TODO Auto-generated method stub
+					return null;
+				}
+				
+				@Override
+				public Optional<File> output() {
+					// TODO Auto-generated method stub
+					return Optional.empty();
+				}
+			});
+		};
+	}
+
+	@Test
+	void testGeneratorBasic() throws Exception {
+		try (Workspace workspace = getWorkspace("test-resources/ws-2")) {
+			Project project = workspace.getProject("org.gecko.emf.osgi.example.model.basic");
+			assertThat(project).isNotNull();
+			project.verifyDependencies(false);
+			assertThat(project.getErrors()).isEmpty();
+			Map<String, String> attrs = Map.of(
+					"generate", "geckoEMF",
+					"genmodel", "other/main/resources/model/basic.genmodel",
+					"output", "src-gen");
 			BuildContext bc = new BuildContext(project, attrs, List.of(), System.in, System.out, System.err);
 			GeckoEmfGenerator generator = new GeckoEmfGenerator();
 			generator.generate(bc, new GeneratorOptions() {
