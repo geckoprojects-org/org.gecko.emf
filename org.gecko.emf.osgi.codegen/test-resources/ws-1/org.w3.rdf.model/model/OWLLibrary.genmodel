@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/uml2/2.2.0/GenModel"
+    copyrightText="Copyright (c) 2012 - 2024 Data In Motion and others.&#xA;All rights reserved. &#xA;&#xA;This program and the accompanying materials are made&#xA;available under the terms of the Eclipse Public License 2.0&#xA;which is available at https://www.eclipse.org/legal/epl-2.0/&#xA;&#xA;SPDX-License-Identifier: EPL-2.0&#xA;&#xA;Contributors:&#xA;     Mark Hoffmann - initial API and implementation"
+    modelDirectory="/org.w3.rdf.model/src" modelPluginID="org.gecko.rdf.model" modelName="OWLLibrary"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="11.0" copyrightFields="false" usedGenPackages="../../org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore ../../org.eclipse.uml2.types/model/Types.genmodel#//types ../../org.eclipse.uml2.uml/model/UML.genmodel#//uml ../../org.eclipse.emf.ecore/model/XMLType.genmodel#//type"
+    operationReflection="true" importOrganizing="true" oSGiCompatible="true">
+  <genAnnotations source="http://www.eclipse.org/emf/2002/GenModel/importer/org.eclipse.uml2.uml.ecore.importer">
+    <details key="OPPOSITE_ROLE_NAMES" value="IGNORE"/>
+    <details key="DUPLICATE_FEATURES" value="IGNORE"/>
+    <details key="ANNOTATION_DETAILS" value="IGNORE"/>
+    <details key="PROPERTY_DEFAULT_EXPRESSIONS" value="IGNORE"/>
+    <details key="DUPLICATE_FEATURE_INHERITANCE" value="IGNORE"/>
+    <details key="COMMENTS" value="PROCESS"/>
+    <details key="DERIVED_FEATURES" value="PROCESS"/>
+    <details key="SUPER_CLASS_ORDER" value="PROCESS"/>
+    <details key="DUPLICATE_OPERATION_INHERITANCE" value="IGNORE"/>
+    <details key="REDEFINING_OPERATIONS" value="IGNORE"/>
+    <details key="INVARIANT_CONSTRAINTS" value="PROCESS"/>
+    <details key="UNION_PROPERTIES" value="IGNORE"/>
+    <details key="DUPLICATE_OPERATIONS" value="IGNORE"/>
+    <details key="NON_API_INVARIANTS" value="IGNORE"/>
+    <details key="CAMEL_CASE_NAMES" value="IGNORE"/>
+    <details key="SUBSETTING_PROPERTIES" value="IGNORE"/>
+    <details key="OPERATION_BODIES" value="IGNORE"/>
+    <details key="ECORE_TAGGED_VALUES" value="PROCESS"/>
+    <details key="UNTYPED_PROPERTIES" value="IGNORE"/>
+    <details key="REDEFINING_PROPERTIES" value="IGNORE"/>
+    <details key="INVOCATION_DELEGATES" value="IGNORE"/>
+    <details key="VALIDATION_DELEGATES" value="IGNORE"/>
+  </genAnnotations>
+  <foreignModel>owl.ecore</foreignModel>
+  <foreignModel>rdfs.ecore</foreignModel>
+  <foreignModel>rdf.ecore</foreignModel>
+  <genPackages xsi:type="genmodel:GenPackage" prefix="Owl" basePackage="org.w3" resource="XML"
+      disposableProviderFactory="true" ecorePackage="owl.ecore#/">
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="owl.ecore#//Nothing"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="owl.ecore#//Thing"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="owl.ecore#//TypedThing"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="owl.ecore#//Annotation"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="owl.ecore#//DataRange"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="owl.ecore#//ObjectProperty">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute owl.ecore#//ObjectProperty/propertyChainAxiom"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="owl.ecore#//NamedIndividual"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="owl.ecore#//Individual"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="owl.ecore#//real"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="owl.ecore#//OntologyProperty"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="owl.ecore#//Class">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EReference owl.ecore#//Class/hasKey"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="owl.ecore#//Type">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference owl.ecore#//Type/disjointUnionOf"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="owl.ecore#//Restriction">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute owl.ecore#//Restriction/cardinality"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute owl.ecore#//Restriction/maxCardinality"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute owl.ecore#//Restriction/maxQualifiedCardinality"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute owl.ecore#//Restriction/minCardinality"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute owl.ecore#//Restriction/minQualifiedCardinality"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute owl.ecore#//Restriction/qualifiedCardinality"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EReference owl.ecore#//Restriction/hasSelf"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference owl.ecore#//Restriction/onProperites"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="owl.ecore#//AsymmetricProperty"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="owl.ecore#//AnonymousIndividual"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="owl.ecore#//TransitiveProperty"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="owl.ecore#//rational"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="owl.ecore#//ReflexiveProperty"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="owl.ecore#//Ontology"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="owl.ecore#//SymmetricProperty"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="owl.ecore#//AllDisjointProperties"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="owl.ecore#//Axiom"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="owl.ecore#//DatatypeProperty"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="owl.ecore#//Datatype"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="owl.ecore#//NegativePropertyAssertion">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference owl.ecore#//NegativePropertyAssertion/sourceIndividual"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference owl.ecore#//NegativePropertyAssertion/targetIndividual"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EReference owl.ecore#//NegativePropertyAssertion/targetValue"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EReference owl.ecore#//NegativePropertyAssertion/assertionProperty"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="owl.ecore#//FunctionalProperty"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="owl.ecore#//AllDisjointClasses"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="owl.ecore#//AllDifferent">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference owl.ecore#//AllDifferent/distinctMembers"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="owl.ecore#//IrreflexiveProperty"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="owl.ecore#//AnnotationProperty"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="owl.ecore#//InverseFunctionalProperty"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="owl.ecore#//DeprecatedClass"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="owl.ecore#//DeprecatedProperty"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="owl.ecore#//PropertyChainAxiom"/>
+    <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="AuxiliaryElements" basePackage="org.gecko.sw.owl"
+        disposableProviderFactory="true" ecorePackage="owl.ecore#//AuxiliaryElements">
+      <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="Labels" basePackage="org.gecko.sw.owl.AuxiliaryElements"
+          disposableProviderFactory="true" ecorePackage="owl.ecore#//AuxiliaryElements/Labels"/>
+      <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="Comments" basePackage="org.gecko.sw.owl.AuxiliaryElements"
+          disposableProviderFactory="true" ecorePackage="owl.ecore#//AuxiliaryElements/Comments"/>
+      <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="URIReferences" basePackage="org.gecko.sw.owl.AuxiliaryElements"
+          disposableProviderFactory="true" ecorePackage="owl.ecore#//AuxiliaryElements/URIReferences"/>
+      <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="BlankNodes" basePackage="org.gecko.sw.owl.AuxiliaryElements"
+          disposableProviderFactory="true" ecorePackage="owl.ecore#//AuxiliaryElements/BlankNodes"/>
+    </nestedGenPackages>
+  </genPackages>
+  <genPackages xsi:type="genmodel:GenPackage" prefix="Rdfs" basePackage="org.w3" resource="XML"
+      disposableProviderFactory="true" ecorePackage="rdfs.ecore#/">
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="rdfs.ecore#//SeeAlso">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference rdfs.ecore#//SeeAlso/resource"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference rdfs.ecore#//SeeAlso/seeAlso"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="rdfs.ecore#//RDFResource">
+      <genFeatures xsi:type="genmodel:GenFeature" property="None" children="true"
+          createChild="true" ecoreFeature="ecore:EReference rdfs.ecore#//RDFResource/rdfComment"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference rdfs.ecore#//RDFResource/isDefinedBy"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference rdfs.ecore#//RDFResource/seeAlso"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference rdfs.ecore#//RDFResource/rdfMembers"/>
+      <genFeatures xsi:type="genmodel:GenFeature" property="None" children="true"
+          createChild="true" ecoreFeature="ecore:EReference rdfs.ecore#//RDFResource/rdfLabel"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference rdfs.ecore#//RDFResource/rdfType"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference rdfs.ecore#//RDFResource/rdfValue"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="rdfs.ecore#//RDFLabel">
+      <genFeatures xsi:type="genmodel:GenFeature" property="None" notify="false" createChild="false"
+          ecoreFeature="ecore:EReference rdfs.ecore#//RDFLabel/resource"/>
+      <genFeatures xsi:type="genmodel:GenFeature" property="None" children="true"
+          createChild="true" ecoreFeature="ecore:EReference rdfs.ecore#//RDFLabel/label"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="rdfs.ecore#//RDFLiteral">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute rdfs.ecore#//RDFLiteral/textValue"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="rdfs.ecore#//RDFContainer"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="rdfs.ecore#//RDFClass">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference rdfs.ecore#//RDFClass/subClassOf"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="rdfs.ecore#//Domain">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference rdfs.ecore#//Domain/property"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference rdfs.ecore#//Domain/domain"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="rdfs.ecore#//SubPropertyOf">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference rdfs.ecore#//SubPropertyOf/property"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference rdfs.ecore#//SubPropertyOf/subPropertyOf"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="rdfs.ecore#//Member">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference rdfs.ecore#//Member/resource"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference rdfs.ecore#//Member/member"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="rdfs.ecore#//SubClassOf">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference rdfs.ecore#//SubClassOf/rdfClass"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference rdfs.ecore#//SubClassOf/subClassOf"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="rdfs.ecore#//IsDefinedBy">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference rdfs.ecore#//IsDefinedBy/isDefinedBy"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="rdfs.ecore#//RDFComment">
+      <genFeatures xsi:type="genmodel:GenFeature" property="None" notify="false" createChild="false"
+          ecoreFeature="ecore:EReference rdfs.ecore#//RDFComment/resource"/>
+      <genFeatures xsi:type="genmodel:GenFeature" property="None" children="true"
+          createChild="true" ecoreFeature="ecore:EReference rdfs.ecore#//RDFComment/comment"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="rdfs.ecore#//RDFDatatype"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="rdfs.ecore#//ContainerMembershipProperty"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="rdfs.ecore#//Range">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference rdfs.ecore#//Range/property"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference rdfs.ecore#//Range/range"/>
+    </genClasses>
+    <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="AuxiliaryElements" basePackage="org.gecko.sw.rdfs"
+        disposableProviderFactory="true" ecorePackage="rdfs.ecore#//AuxiliaryElements">
+      <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="Labels" basePackage="org.gecko.sw.rdfs.AuxiliaryElements"
+          disposableProviderFactory="true" ecorePackage="rdfs.ecore#//AuxiliaryElements/Labels"/>
+      <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="URIReferences" basePackage="org.gecko.sw.rdfs.AuxiliaryElements"
+          disposableProviderFactory="true" ecorePackage="rdfs.ecore#//AuxiliaryElements/URIReferences"/>
+    </nestedGenPackages>
+  </genPackages>
+  <genPackages xsi:type="genmodel:GenPackage" prefix="Rdf" basePackage="org.w3" resource="XML"
+      disposableProviderFactory="true" ecorePackage="rdf.ecore#/">
+    <genDataTypes xsi:type="genmodel:GenDataType" ecoreDataType="rdf.ecore#//PrimitiveLiteral"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="rdf.ecore#//RDFList">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference rdf.ecore#//RDFList/rest"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference rdf.ecore#//RDFList/first"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="rdf.ecore#//Rest">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference rdf.ecore#//Rest/parent"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="rdf.ecore#//Alt"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="rdf.ecore#//Bag"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="rdf.ecore#//IRI">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute rdf.ecore#//IRI/iri"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="rdf.ecore#//RDFSubject">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference rdf.ecore#//RDFSubject/statement"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="rdf.ecore#//RDFStatement">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference rdf.ecore#//RDFStatement/predicate"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference rdf.ecore#//RDFStatement/object"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference rdf.ecore#//RDFStatement/subject"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="rdf.ecore#//RDFPredicate">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference rdf.ecore#//RDFPredicate/statement"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="rdf.ecore#//RDFType">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference rdf.ecore#//RDFType/resource"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference rdf.ecore#//RDFType/type"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="rdf.ecore#//RDFValue">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference rdf.ecore#//RDFValue/resource"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference rdf.ecore#//RDFValue/value"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="rdf.ecore#//First">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference rdf.ecore#//First/parent"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference rdf.ecore#//First/first"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="rdf.ecore#//Seq">
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="rdf.ecore#//Seq/unnamed5">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="rdf.ecore#//Seq/unnamed5/diagnostics"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="rdf.ecore#//Seq/unnamed5/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="rdf.ecore#//RDFObject">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference rdf.ecore#//RDFObject/statement"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="rdf.ecore#//RDFURI"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="rdf.ecore#//RDFProperty">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference rdf.ecore#//RDFProperty/domain"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference rdf.ecore#//RDFProperty/subPropertyOf"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference rdf.ecore#//RDFProperty/range"/>
+    </genClasses>
+    <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="AuxiliaryElements" basePackage="org.gecko.sw.rdf"
+        disposableProviderFactory="true" ecorePackage="rdf.ecore#//AuxiliaryElements">
+      <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="Comments" basePackage="org.gecko.sw.rdf.AuxiliaryElements"
+          disposableProviderFactory="true" ecorePackage="rdf.ecore#//AuxiliaryElements/Comments"/>
+      <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="Labels" basePackage="org.gecko.sw.rdf.AuxiliaryElements"
+          disposableProviderFactory="true" ecorePackage="rdf.ecore#//AuxiliaryElements/Labels"/>
+      <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="URIReferences" basePackage="org.gecko.sw.rdf.AuxiliaryElements"
+          disposableProviderFactory="true" ecorePackage="rdf.ecore#//AuxiliaryElements/URIReferences"/>
+    </nestedGenPackages>
+  </genPackages>
+</genmodel:GenModel>

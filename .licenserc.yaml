@@ -45,6 +45,7 @@ header:
     - '**/*.aird'
     - '**/*.basic'
     - '**/.classpath'
+    - '**/*.xmi'
     - 'org.gecko.emf.osgi.codegen/src/org/gecko/emf/osgi/codegen/templates/model/*'
     - 'org.gecko.emf.osgi.extender/src/org/gecko/emf/osgi/extender/**'
     - 'LICENSE'

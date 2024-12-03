@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="Copyright (c) 2012 - 2024 Data In Motion and others.&#xA;All rights reserved. &#xA;&#xA;This program and the accompanying materials are made&#xA;available under the terms of the Eclipse Public License 2.0&#xA;which is available at https://www.eclipse.org/legal/epl-2.0/&#xA;&#xA;SPDX-License-Identifier: EPL-2.0&#xA;&#xA;Contributors:&#xA;     Mark Hoffmann - initial API and implementation"
+    modelDirectory="/org.w3.rdf.model/src" modelPluginID="org.w3.rdf.model" modelName="Rdf"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="11.0" copyrightFields="false" usedGenPackages="../../org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore ../../org.eclipse.uml2.types/model/Types.genmodel#//types ../../org.eclipse.uml2.uml/model/UML.genmodel#//uml ../../org.eclipse.emf.ecore/model/XMLType.genmodel#//type"
+    operationReflection="true" importOrganizing="true" oSGiCompatible="true">
+  <foreignModel>owl.ecore</foreignModel>
+  <foreignModel>rdfs.ecore</foreignModel>
+  <foreignModel>rdf.ecore</foreignModel>
+  <genPackages prefix="Owl" basePackage="org.w3" disposableProviderFactory="true"
+      ecorePackage="owl.ecore#/">
+    <genClasses ecoreClass="owl.ecore#//Nothing"/>
+    <genClasses ecoreClass="owl.ecore#//Thing"/>
+    <genClasses ecoreClass="owl.ecore#//TypedThing"/>
+    <genClasses ecoreClass="owl.ecore#//Annotation"/>
+    <genClasses ecoreClass="owl.ecore#//DataRange"/>
+    <genClasses ecoreClass="owl.ecore#//ObjectProperty">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute owl.ecore#//ObjectProperty/propertyChainAxiom"/>
+    </genClasses>
+    <genClasses ecoreClass="owl.ecore#//NamedIndividual"/>
+    <genClasses ecoreClass="owl.ecore#//Individual"/>
+    <genClasses ecoreClass="owl.ecore#//real"/>
+    <genClasses ecoreClass="owl.ecore#//OntologyProperty"/>
+    <genClasses ecoreClass="owl.ecore#//Class">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference owl.ecore#//Class/hasKey"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="owl.ecore#//Type">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference owl.ecore#//Type/disjointUnionOf"/>
+    </genClasses>
+    <genClasses ecoreClass="owl.ecore#//Restriction">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute owl.ecore#//Restriction/cardinality"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute owl.ecore#//Restriction/maxCardinality"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute owl.ecore#//Restriction/maxQualifiedCardinality"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute owl.ecore#//Restriction/minCardinality"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute owl.ecore#//Restriction/minQualifiedCardinality"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute owl.ecore#//Restriction/qualifiedCardinality"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference owl.ecore#//Restriction/hasSelf"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference owl.ecore#//Restriction/onProperites"/>
+    </genClasses>
+    <genClasses ecoreClass="owl.ecore#//AsymmetricProperty"/>
+    <genClasses ecoreClass="owl.ecore#//AnonymousIndividual"/>
+    <genClasses ecoreClass="owl.ecore#//TransitiveProperty"/>
+    <genClasses ecoreClass="owl.ecore#//rational"/>
+    <genClasses ecoreClass="owl.ecore#//ReflexiveProperty"/>
+    <genClasses ecoreClass="owl.ecore#//Ontology"/>
+    <genClasses ecoreClass="owl.ecore#//SymmetricProperty"/>
+    <genClasses ecoreClass="owl.ecore#//AllDisjointProperties"/>
+    <genClasses ecoreClass="owl.ecore#//Axiom"/>
+    <genClasses ecoreClass="owl.ecore#//DatatypeProperty"/>
+    <genClasses ecoreClass="owl.ecore#//Datatype"/>
+    <genClasses ecoreClass="owl.ecore#//NegativePropertyAssertion">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference owl.ecore#//NegativePropertyAssertion/sourceIndividual"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference owl.ecore#//NegativePropertyAssertion/targetIndividual"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference owl.ecore#//NegativePropertyAssertion/targetValue"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference owl.ecore#//NegativePropertyAssertion/assertionProperty"/>
+    </genClasses>
+    <genClasses ecoreClass="owl.ecore#//FunctionalProperty"/>
+    <genClasses ecoreClass="owl.ecore#//AllDisjointClasses"/>
+    <genClasses ecoreClass="owl.ecore#//AllDifferent">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference owl.ecore#//AllDifferent/distinctMembers"/>
+    </genClasses>
+    <genClasses ecoreClass="owl.ecore#//IrreflexiveProperty"/>
+    <genClasses ecoreClass="owl.ecore#//AnnotationProperty"/>
+    <genClasses ecoreClass="owl.ecore#//InverseFunctionalProperty"/>
+    <genClasses ecoreClass="owl.ecore#//DeprecatedClass"/>
+    <genClasses ecoreClass="owl.ecore#//DeprecatedProperty"/>
+    <genClasses ecoreClass="owl.ecore#//PropertyChainAxiom"/>
+    <nestedGenPackages prefix="AuxiliaryElements" disposableProviderFactory="true"
+        ecorePackage="owl.ecore#//AuxiliaryElements">
+      <nestedGenPackages prefix="Labels" disposableProviderFactory="true" ecorePackage="owl.ecore#//AuxiliaryElements/Labels"/>
+      <nestedGenPackages prefix="Comments" disposableProviderFactory="true" ecorePackage="owl.ecore#//AuxiliaryElements/Comments"/>
+      <nestedGenPackages prefix="URIReferences" disposableProviderFactory="true" ecorePackage="owl.ecore#//AuxiliaryElements/URIReferences"/>
+      <nestedGenPackages prefix="BlankNodes" disposableProviderFactory="true" ecorePackage="owl.ecore#//AuxiliaryElements/BlankNodes"/>
+    </nestedGenPackages>
+  </genPackages>
+  <genPackages prefix="Rdfs" basePackage="org.w3" disposableProviderFactory="true"
+      ecorePackage="rdfs.ecore#/">
+    <genClasses ecoreClass="rdfs.ecore#//SeeAlso">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference rdfs.ecore#//SeeAlso/resource"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference rdfs.ecore#//SeeAlso/seeAlso"/>
+    </genClasses>
+    <genClasses ecoreClass="rdfs.ecore#//RDFResource">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rdfs.ecore#//RDFResource/rdfComment"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference rdfs.ecore#//RDFResource/isDefinedBy"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference rdfs.ecore#//RDFResource/seeAlso"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference rdfs.ecore#//RDFResource/rdfMembers"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rdfs.ecore#//RDFResource/rdfLabel"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference rdfs.ecore#//RDFResource/rdfType"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference rdfs.ecore#//RDFResource/rdfValue"/>
+    </genClasses>
+    <genClasses ecoreClass="rdfs.ecore#//RDFLabel">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference rdfs.ecore#//RDFLabel/resource"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rdfs.ecore#//RDFLabel/label"/>
+    </genClasses>
+    <genClasses ecoreClass="rdfs.ecore#//RDFLiteral">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rdfs.ecore#//RDFLiteral/textValue"/>
+    </genClasses>
+    <genClasses ecoreClass="rdfs.ecore#//RDFContainer"/>
+    <genClasses ecoreClass="rdfs.ecore#//RDFClass">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference rdfs.ecore#//RDFClass/subClassOf"/>
+    </genClasses>
+    <genClasses ecoreClass="rdfs.ecore#//Domain">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference rdfs.ecore#//Domain/property"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference rdfs.ecore#//Domain/domain"/>
+    </genClasses>
+    <genClasses ecoreClass="rdfs.ecore#//SubPropertyOf">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference rdfs.ecore#//SubPropertyOf/property"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference rdfs.ecore#//SubPropertyOf/subPropertyOf"/>
+    </genClasses>
+    <genClasses ecoreClass="rdfs.ecore#//Member">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference rdfs.ecore#//Member/resource"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference rdfs.ecore#//Member/member"/>
+    </genClasses>
+    <genClasses ecoreClass="rdfs.ecore#//SubClassOf">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference rdfs.ecore#//SubClassOf/rdfClass"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference rdfs.ecore#//SubClassOf/subClassOf"/>
+    </genClasses>
+    <genClasses ecoreClass="rdfs.ecore#//IsDefinedBy">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference rdfs.ecore#//IsDefinedBy/isDefinedBy"/>
+    </genClasses>
+    <genClasses ecoreClass="rdfs.ecore#//RDFComment">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference rdfs.ecore#//RDFComment/resource"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rdfs.ecore#//RDFComment/comment"/>
+    </genClasses>
+    <genClasses ecoreClass="rdfs.ecore#//RDFDatatype"/>
+    <genClasses ecoreClass="rdfs.ecore#//ContainerMembershipProperty"/>
+    <genClasses ecoreClass="rdfs.ecore#//Range">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference rdfs.ecore#//Range/property"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference rdfs.ecore#//Range/range"/>
+    </genClasses>
+    <nestedGenPackages prefix="AuxiliaryElements" disposableProviderFactory="true"
+        ecorePackage="rdfs.ecore#//AuxiliaryElements">
+      <nestedGenPackages prefix="Labels" disposableProviderFactory="true" ecorePackage="rdfs.ecore#//AuxiliaryElements/Labels"/>
+      <nestedGenPackages prefix="URIReferences" disposableProviderFactory="true" ecorePackage="rdfs.ecore#//AuxiliaryElements/URIReferences"/>
+    </nestedGenPackages>
+  </genPackages>
+  <genPackages prefix="Rdf" basePackage="org.w3" disposableProviderFactory="true"
+      ecorePackage="rdf.ecore#/">
+    <genDataTypes ecoreDataType="rdf.ecore#//PrimitiveLiteral"/>
+    <genClasses ecoreClass="rdf.ecore#//RDFList">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference rdf.ecore#//RDFList/rest"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference rdf.ecore#//RDFList/first"/>
+    </genClasses>
+    <genClasses ecoreClass="rdf.ecore#//Rest">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference rdf.ecore#//Rest/parent"/>
+    </genClasses>
+    <genClasses ecoreClass="rdf.ecore#//Alt"/>
+    <genClasses ecoreClass="rdf.ecore#//Bag"/>
+    <genClasses ecoreClass="rdf.ecore#//IRI">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rdf.ecore#//IRI/iri"/>
+    </genClasses>
+    <genClasses ecoreClass="rdf.ecore#//RDFSubject">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference rdf.ecore#//RDFSubject/statement"/>
+    </genClasses>
+    <genClasses ecoreClass="rdf.ecore#//RDFStatement">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference rdf.ecore#//RDFStatement/predicate"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference rdf.ecore#//RDFStatement/object"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference rdf.ecore#//RDFStatement/subject"/>
+    </genClasses>
+    <genClasses ecoreClass="rdf.ecore#//RDFPredicate">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference rdf.ecore#//RDFPredicate/statement"/>
+    </genClasses>
+    <genClasses ecoreClass="rdf.ecore#//RDFType">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference rdf.ecore#//RDFType/resource"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference rdf.ecore#//RDFType/type"/>
+    </genClasses>
+    <genClasses ecoreClass="rdf.ecore#//RDFValue">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference rdf.ecore#//RDFValue/resource"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference rdf.ecore#//RDFValue/value"/>
+    </genClasses>
+    <genClasses ecoreClass="rdf.ecore#//First">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference rdf.ecore#//First/parent"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference rdf.ecore#//First/first"/>
+    </genClasses>
+    <genClasses ecoreClass="rdf.ecore#//Seq">
+      <genOperations ecoreOperation="rdf.ecore#//Seq/unnamed5">
+        <genParameters ecoreParameter="rdf.ecore#//Seq/unnamed5/diagnostics"/>
+        <genParameters ecoreParameter="rdf.ecore#//Seq/unnamed5/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="rdf.ecore#//RDFObject">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference rdf.ecore#//RDFObject/statement"/>
+    </genClasses>
+    <genClasses ecoreClass="rdf.ecore#//RDFURI"/>
+    <genClasses ecoreClass="rdf.ecore#//RDFProperty">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference rdf.ecore#//RDFProperty/domain"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference rdf.ecore#//RDFProperty/subPropertyOf"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference rdf.ecore#//RDFProperty/range"/>
+    </genClasses>
+    <nestedGenPackages prefix="AuxiliaryElements" disposableProviderFactory="true"
+        ecorePackage="rdf.ecore#//AuxiliaryElements">
+      <nestedGenPackages prefix="Comments" disposableProviderFactory="true" ecorePackage="rdf.ecore#//AuxiliaryElements/Comments"/>
+      <nestedGenPackages prefix="Labels" disposableProviderFactory="true" ecorePackage="rdf.ecore#//AuxiliaryElements/Labels"/>
+      <nestedGenPackages prefix="URIReferences" disposableProviderFactory="true" ecorePackage="rdf.ecore#//AuxiliaryElements/URIReferences"/>
+    </nestedGenPackages>
+  </genPackages>
+</genmodel:GenModel>

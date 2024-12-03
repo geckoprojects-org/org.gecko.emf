@@ -4,4 +4,8 @@ Bundle-Description: Gecko EMF OSGi minimal integration tests container
 -dependson: org.gecko.emf.osgi.itest
 
 -baseline: 
--library: enableOSGi-Test
+-library: \
+	enable-emf,\
+	enableOSGi-Test
+-buildpath: \
+	org.gecko.emf.osgi.api;version=snapshot

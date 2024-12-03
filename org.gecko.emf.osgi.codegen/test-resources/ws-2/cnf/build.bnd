@@ -1,0 +1,16 @@
+-plugin.2.DIM: \
+    aQute.bnd.repository.maven.provider.MavenBndRepository; \
+        snapshotUrl=https://devel.data-in-motion.biz/nexus/repository/dim-snapshot/; \
+        releaseUrl=https://devel.data-in-motion.biz/nexus/repository/maven-releases/; \
+        index=${.}/dim-uml.mvn; \
+        readOnly=true; \
+        poll.time=-1; \
+        name="DIM UML2"
+-plugin.3.Central: \
+    aQute.bnd.repository.maven.provider.MavenBndRepository; \
+        snapshotUrl="https://oss.sonatype.org/content/repositories/snapshots/"; \
+        releaseUrl=https://repo.maven.apache.org/maven2/; \
+        index=${.}/central.mvn; \
+        readOnly=true; \
+        poll.time=-1; \
+        name="Central"

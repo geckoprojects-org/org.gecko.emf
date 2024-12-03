@@ -57,6 +57,7 @@ public class <%=genPackage.getPrefix()%>EPackageConfigurator implements EPackage
 		<%=genModel.getImportedName("java.util.Map")%><String, Object> properties = new <%=genModel.getImportedName("java.util.HashMap")%><String, Object>();
 		properties.put(<%=genModel.getImportedName("org.gecko.emf.osgi.constants.EMFNamespaces")%>.EMF_MODEL_NAME, <%=genPackage.getPackageInterfaceName()%>.eNAME);
 		properties.put(<%=genModel.getImportedName("org.gecko.emf.osgi.constants.EMFNamespaces")%>.EMF_MODEL_NSURI, <%=genPackage.getPackageInterfaceName()%>.eNS_URI);
+		properties.put(<%=genModel.getImportedName("org.gecko.emf.osgi.constants.EMFNamespaces")%>.EMF_MODEL_REGISTRATION, <%=genModel.getImportedName("org.gecko.emf.osgi.constants.EMFNamespaces")%>.MODEL_REGISTRATION_PROVIDED);
 		properties.put(<%=genModel.getImportedName("org.gecko.emf.osgi.constants.EMFNamespaces")%>.EMF_MODEL_FILE_EXT, "<%=genPackage.getFileExtension()%>");
     <% if (genPackage.getContentTypeIdentifier() != null) {%>
 		properties.put(<%=genModel.getImportedName("org.gecko.emf.osgi.constants.EMFNamespaces")%>.EMF_MODEL_CONTENT_TYPE, "<%=genPackage.getContentTypeIdentifier()%>");

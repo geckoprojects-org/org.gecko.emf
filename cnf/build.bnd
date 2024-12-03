@@ -50,3 +50,13 @@ mavenCentral: true
 		overwrite           =true;\
 		pretty              =true;\
 		name            	=local
+		
+-plugin.2.DIM: \
+    aQute.bnd.repository.maven.provider.MavenBndRepository; \
+        snapshotUrl=https://devel.data-in-motion.biz/nexus/repository/dim-snapshot/; \
+        releaseUrl=https://devel.data-in-motion.biz/nexus/repository/maven-releases/; \
+        index=${.}/dim-uml.mvn; \
+        readOnly=true; \
+        poll.time=-1; \
+        name="DIM UML2"
+	

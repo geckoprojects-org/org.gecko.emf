@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="owl" nsURI="http://www.w3.org/2002/07/owl#" nsPrefix="owl">
+  <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+    <details key="documentation" value="This library models the elements in the OWL namespace, http://www.w3.org/2002/07/owl.rdf, for use in vocabulary and ontology development."/>
+  </eAnnotations>
+  <eClassifiers xsi:type="ecore:EClass" name="Nothing" eSuperTypes="#//Thing">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="This is the empty class."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Thing" eSuperTypes="#//TypedThing">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="The class of OWL individuals."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TypedThing" eSuperTypes="rdfs.ecore#//RDFResource">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="The TypedThing class is used to help aggregate things that types in the profile."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Annotation" eSuperTypes="rdfs.ecore#//RDFResource">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="The class of annotated annotations for which the RDF serialization consists of an annotated subject, predicate and object."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DataRange" eSuperTypes="rdfs.ecore#//RDFDatatype">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="The class of OWL data ranges, which are special kinds of datatypes. Note: The use of the IRI owl:DataRange has been deprecated as of OWL 2. The IRI rdfs:Datatype SHOULD be used instead."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ObjectProperty" eSuperTypes="rdfs.ecore#//RDFDatatype">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="The class of object properties."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="propertyChainAxiom" ordered="false"
+        upperBound="-1" eType="ecore:EEnum ../../org.eclipse.uml2.uml/model/UML.ecore#//ObjectNodeOrderingKind"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="NamedIndividual" eSuperTypes="#//Individual">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="The class of named individuals."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Individual" eSuperTypes="#//Thing">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="This class represents the class of owl individuals  There is no explicit URI in the W3C OWL 2 namespace for this class."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="real" eSuperTypes="rdfs.ecore#//RDFLiteral"/>
+  <eClassifiers xsi:type="ecore:EClass" name="OntologyProperty" eSuperTypes="rdf.ecore#//RDFProperty">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="The class of ontology properties."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Class" eSuperTypes="#//Type">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="The class of OWL classes."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hasKey" upperBound="-1"
+        eType="ecore:EClass rdf.ecore#//RDFProperty"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Type" abstract="true" eSuperTypes="../../org.eclipse.uml2.uml/model/UML.ecore#//Class">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="The abstract Type class is used to help aggregate things that have either class or data values in OWL 2, to limit extraneous duplication of language in the profile."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="disjointUnionOf" ordered="false"
+        lowerBound="1" eType="#//Type"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Restriction" eSuperTypes="#//Class">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="The class of property restrictions."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="cardinality" ordered="false"
+        eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/XMLType.ecore#//NonNegativeInteger"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="maxCardinality" ordered="false"
+        eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/XMLType.ecore#//NonNegativeInteger"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="maxQualifiedCardinality"
+        ordered="false" eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/XMLType.ecore#//NonNegativeInteger"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="minCardinality" ordered="false"
+        eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/XMLType.ecore#//NonNegativeInteger"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="minQualifiedCardinality"
+        ordered="false" eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/XMLType.ecore#//NonNegativeInteger"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="qualifiedCardinality" ordered="false"
+        eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/XMLType.ecore#//NonNegativeInteger"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hasSelf" eType="ecore:EClass rdfs.ecore#//RDFResource"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="onProperites" upperBound="-1"
+        eType="ecore:EClass rdfs.ecore#//RDFResource"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AsymmetricProperty" eSuperTypes="#//ObjectProperty"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AnonymousIndividual" eSuperTypes="#//Individual">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="The class of anonymous owl individuals.  Such individuals can only be referenced locally, and thus there is no corresponding URI for this class in the W3C OWL 2 namespace."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TransitiveProperty" eSuperTypes="#//ObjectProperty">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="The class of transitive properties."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="rational" eSuperTypes="#//real"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ReflexiveProperty" eSuperTypes="#//ObjectProperty">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="The class of reflexive properties."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Ontology" eSuperTypes="rdfs.ecore#//RDFResource">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="The class of ontologies."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SymmetricProperty" eSuperTypes="#//ObjectProperty">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="The class of symmetric properties."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AllDisjointProperties" eSuperTypes="rdfs.ecore#//RDFResource">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="This class is a proxy for the class of collections of pairwise disjoint properties."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Axiom" eSuperTypes="rdfs.ecore#//RDFResource">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="The class of annotated axioms for which the RDF serialization consists of an annotated subject, predicate and object."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DatatypeProperty" eSuperTypes="rdf.ecore#//RDFProperty">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="The class of data properties."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Datatype" eSuperTypes="#//Type rdfs.ecore#//RDFDatatype">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="This local Datatype class is used as the source of OWL-specific properties in the OWL profile."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="NegativePropertyAssertion" eSuperTypes="rdfs.ecore#//RDFResource">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="The class of negative property assertions."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sourceIndividual" ordered="false"
+        eType="#//Thing"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="targetIndividual" ordered="false"
+        eType="#//Thing"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="targetValue" eType="#//Datatype"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="assertionProperty" eType="ecore:EClass rdf.ecore#//RDFProperty"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FunctionalProperty" eSuperTypes="rdf.ecore#//RDFProperty">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="The class of functional properties."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AllDisjointClasses" eSuperTypes="rdfs.ecore#//RDFResource">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="The class of collections of pairwise disjoint classes."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AllDifferent" eSuperTypes="rdfs.ecore#//RDFResource">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="The class of collections of pairwise different individuals."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="distinctMembers" ordered="false"
+        upperBound="-1" eType="#//Thing"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="IrreflexiveProperty" eSuperTypes="#//ObjectProperty">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="The class of irreflexive properties."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AnnotationProperty" eSuperTypes="rdf.ecore#//RDFProperty">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="The class of annotation properties."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="InverseFunctionalProperty" eSuperTypes="#//ObjectProperty">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="The class of inverse-functional properties."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DeprecatedClass" eSuperTypes="rdfs.ecore#//RDFClass">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="The class of deprecated classes."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DeprecatedProperty" eSuperTypes="rdf.ecore#//RDFProperty">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="The class of deprecated properties."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PropertyChainAxiom" eSuperTypes="#//ObjectProperty"/>
+  <eSubpackages name="AuxiliaryElements" nsURI="http:///owl/AuxiliaryElements.ecore"
+      nsPrefix="owl.AuxiliaryElements">
+    <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <details key="originalName" value="Auxiliary Elements"/>
+    </eAnnotations>
+    <eSubpackages name="Labels" nsURI="http:///owl/AuxiliaryElements/Labels.ecore"
+        nsPrefix="owl.AuxiliaryElements.Labels"/>
+    <eSubpackages name="Comments" nsURI="http:///owl/AuxiliaryElements/Comments.ecore"
+        nsPrefix="owl.AuxiliaryElements.Comments"/>
+    <eSubpackages name="URIReferences" nsURI="http:///owl/AuxiliaryElements/URIReferences.ecore"
+        nsPrefix="owl.AuxiliaryElements.URIReferences">
+      <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <details key="originalName" value="URI References"/>
+      </eAnnotations>
+    </eSubpackages>
+    <eSubpackages name="BlankNodes" nsURI="http:///owl/AuxiliaryElements/BlankNodes.ecore"
+        nsPrefix="owl.AuxiliaryElements.BlankNodes">
+      <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <details key="originalName" value="Blank Nodes"/>
+      </eAnnotations>
+    </eSubpackages>
+  </eSubpackages>
+</ecore:EPackage>

@@ -6,6 +6,8 @@ biz.aQute.bnd:aQute.libg:7.0.0
 biz.aQute.bnd:biz.aQute.bndlib:7.0.0
 biz.aQute.bnd:biz.aQute.bnd.javagen:7.0.0
 biz.aQute.bnd:biz.aQute.bnd.annotation:7.0.0
+biz.aQute.bnd:biz.aQute.bnd.util:7.0.0
+biz.aQute.bnd:biz.aQute.repository:7.0.0
 
 org.apache.felix:org.apache.felix.cm.json:2.0.0
 org.apache.felix:org.apache.felix.configadmin:1.9.26
@@ -36,6 +38,7 @@ org.eclipse.emf:org.eclipse.emf.common:2.29.0
 org.eclipse.emf:org.eclipse.emf.ecore:2.35.0
 org.eclipse.emf:org.eclipse.emf.ecore.xcore.lib:1.7.0
 org.eclipse.emf:org.eclipse.emf.ecore.xmi:2.36.0
+org.eclipse.emf:org.eclipse.emf.mapping.ecore2xml:2.13.0
 
 org.osgi:org.osgi.annotation.versioning:1.1.2
 org.osgi:org.osgi.annotation.bundle:2.0.0

@@ -48,6 +48,8 @@ public class EMFNamespaces {
 //	public static final String EMF_MODEL_PREFIX = "emf.model.";
 	// Attribute name for the EMF model name
 	public static final String EMF_MODEL_NAME = EMF_PREFIX + "name";
+	// Attribute name for the EMF model name
+	public static final String EMF_MODEL_REGISTRATION = EMF_PREFIX + "registration";
 	// Attribute name for the EMF model namespace
 	public static final String EMF_MODEL_NSURI = EMF_PREFIX + "nsURI";
 	// Attribute name for the EMF model content type
@@ -96,5 +98,15 @@ public class EMFNamespaces {
 	public static final String EMF_MODEL_EXTENDER_PROP_MODELS_NAME = "models";
 	// Default model path to look into
 	public static final String EMF_MODEL_EXTENDER_DEFAULT_PATH = "model";
+	
+	// Types for the EMF model registration information
+	// The registration happened with generated code / a provided bundle
+	public static final String MODEL_REGISTRATION_PROVIDED = "provided";
+	// The registration happened for internal purposes
+	public static final String MODEL_REGISTRATION_INTERNAL = "internal";
+	// The dynamic package loading was used to register the EPackage
+	public static final String MODEL_REGISTRATION_DYNAMIC = "dynamic";
+	// The model extender was used to register the EPackage
+	public static final String MODEL_REGISTRATION_EXTENDER = "extender";
 	
 }

@@ -1,5 +1,8 @@
 src=${^src}
 
+javac.source: 17
+javac.target: 17
+
 -buildpath: \
 	org.osgi.annotation.bundle;version=latest,\
 	org.osgi.annotation.versioning;version=latest,\
@@ -24,7 +27,17 @@ src=${^src}
 	org.eclipse.text;version=latest,\
 	biz.aQute.bndlib;version=latest,\
 	aQute.libg;version=latest,\
-	org.gecko.emf.osgi;version=project
+	org.gecko.emf.osgi;version=project,\
+	org.eclipse.uml2.codegen.ecore;version=latest
+
+-testpath: \
+	slf4j.api;version=latest, \
+	org.osgi.service.repository;version=latest,\
+    slf4j.simple;version=latest,\
+    biz.aQute.bnd.util;version=latest,\
+    biz.aQute.bndlib;version=latest,\
+    biz.aQute.repository;version=latest,\
+    org.osgi.util.function
 
 -includeresource.resource: \
 	/=resources,\
@@ -48,6 +61,7 @@ src=${^src}
 	aQute.bnd.service.generate.Options
 	
 Import-Package: \
+	org.eclipse.core.runtime;version=1.0,\
 	!*
 
 Bundle-Name: EMF OSGi Bnd Codegen

@@ -17,14 +17,12 @@ import org.eclipse.emf.ecore.resource.URIHandler;
 import org.gecko.emf.osgi.UriHandlerProvider;
 import org.gecko.emf.osgi.urihandler.RestfulURIHandlerImpl;
 import org.osgi.annotation.versioning.ProviderType;
-import org.osgi.service.component.annotations.Component;
 
 /**
  * Provider for the rest-ful URI Handler, that can use BasicAuthentication
  * @author Mark Hoffmann
  * @since 27.07.2017
  */
-@Component(name="RestUriHandlerProvider", immediate=true, service=UriHandlerProvider.class)
 @ProviderType
 public class RestUriHandlerProvider implements UriHandlerProvider {
 
