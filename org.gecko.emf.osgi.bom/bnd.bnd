@@ -1,6 +1,0 @@
--include: \
-	${.}/../org.gecko.emf.osgi.bnd.library.workspace/buildpath.bnd
-
--diffignore: */pom.properties
-
-	

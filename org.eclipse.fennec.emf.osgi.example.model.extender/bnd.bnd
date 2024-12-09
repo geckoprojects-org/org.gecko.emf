@@ -1,0 +1,14 @@
+-includeresource.model: model/manual.ecore=model/manual.ecore,\
+	model/manual.genmodel=model/manual.genmodel,\
+	OSGI-INF/model/test.ecore=model/test.ecore,\
+	/toast/test.ecore=model/test.ecore,\
+	/toast/toast.ecore=model/toast.ecore
+
+Require-Capability: \
+	osgi.extender;\
+	filter:="(osgi.extender=emf.model)";\
+	models:List<String>="/model;foo=bar;test=me,OSGI-INF/model;test=me;foo=baz,/toast/toast.ecore;toast=me;foo=toast"
+Bundle-Name: EMF Model Extender Sample Model
+Bundle-Description: Eclipse Fennec EMF OSGi Model Extender Sample Model
+
+-buildpath: org.eclipse.fennec.emf.osgi.api;version=snapshot

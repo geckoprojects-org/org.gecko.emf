@@ -1,0 +1,11 @@
+# Export over bnd.bnd file
+Bundle-Name: EMF OSGi API
+Bundle-Description: Eclipse Fennec EMF OSGI API
+
+Export-Package: \
+	org.eclipse.fennec.emf.osgi,\
+	org.eclipse.fennec.emf.osgi.helper,\
+	org.eclipse.fennec.emf.osgi.factory,\
+	org.eclipse.fennec.emf.osgi.annotation.*,\
+	org.eclipse.fennec.emf.osgi.configurator,\
+	org.eclipse.fennec.emf.osgi.constants

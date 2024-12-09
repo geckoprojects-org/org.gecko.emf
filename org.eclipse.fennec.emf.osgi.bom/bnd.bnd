@@ -1,0 +1,6 @@
+-include: \
+	${.}/../org.eclipse.fennec.emf.osgi.bnd.library.workspace/buildpath.bnd
+
+-diffignore: */pom.properties
+
+	

@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="ASCII"?>
+<basic:Person xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:basic="http://fennec.eclipse.org/example/model/basic" firstName="Mark" lastName="Hoffmann" gender="MALE"/>

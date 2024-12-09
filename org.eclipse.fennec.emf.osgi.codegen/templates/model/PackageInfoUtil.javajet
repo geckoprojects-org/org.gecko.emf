@@ -1,0 +1,6 @@
+<%@ jet package="org.eclipse.fennec.emf.osgi.codegen.templates.model" imports="org.eclipse.emf.codegen.ecore.genmodel.* org.eclipse.fennec.emf.osgi.codegen.templates.model.helper.GeneratorHelper" class="PackageInfoUtil"%>
+<%final GenPackage genPackage = (GenPackage)((Object[])argument)[0];%>
+<%@ include file="Header.javajetinc"%>
+@org.osgi.annotation.bundle.Export
+@org.osgi.annotation.versioning.Version("<%=GeneratorHelper.getVersion(genPackage)%>")
+package <%=genPackage.getUtilitiesPackageName()%>;

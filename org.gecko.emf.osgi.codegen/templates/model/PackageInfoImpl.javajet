@@ -1,6 +1,0 @@
-<%@ jet package="org.gecko.emf.osgi.codegen.templates.model" imports="org.eclipse.emf.codegen.ecore.genmodel.* org.gecko.emf.osgi.codegen.templates.model.helper.GeneratorHelper" class="PackageInfoImpl"%>
-<%final GenPackage genPackage = (GenPackage)((Object[])argument)[0];%>
-<%@ include file="Header.javajetinc"%>
-@org.osgi.annotation.bundle.Export
-@org.osgi.annotation.versioning.Version("<%=GeneratorHelper.getVersion(genPackage)%>")
-package <%=genPackage.getInterfacePackageName()%>.<%=genPackage.getClassPackageSuffix()%>;

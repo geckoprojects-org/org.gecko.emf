@@ -1,0 +1,11 @@
+-privatepackage: \
+	org.eclipse.fennec.emf.osgi.components.config,\
+	org.eclipse.fennec.emf.osgi.components.dynamic,\
+	org.eclipse.fennec.emf.osgi.ecore
+
+Export-Package: \
+	org.eclipse.fennec.emf.osgi.components.config,\
+	org.eclipse.fennec.emf.osgi.resourceset
+	
+Bundle-Name: EMF OSGi additional functionality
+Bundle-Description: Eclipse Fennec EMF OSGi Implementation

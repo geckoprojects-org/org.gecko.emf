@@ -1,0 +1,14 @@
+-buildpath: \
+	org.osgi.framework;version=latest,\
+	org.osgi.namespace.extender;version=latest,\
+	org.osgi.resource;version=latest,\
+	org.osgi.util.tracker;version=latest,\
+	org.osgi.service.component;version=latest,\
+	org.osgi.service.coordinator;version=latest,\
+	org.eclipse.emf.common;version=latest,\
+	org.eclipse.emf.ecore;version=latest,\
+	org.eclipse.emf.ecore.xmi;version=latest,\
+	org.eclipse.fennec.emf.osgi.api;version=snapshot
+	
+Bundle-Name: EMF OSGI Model Extender
+Bundle-Description: EMF OSGi extender implementation for EMF Models

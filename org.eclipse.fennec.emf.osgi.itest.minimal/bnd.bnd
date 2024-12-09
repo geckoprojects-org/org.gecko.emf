@@ -1,0 +1,11 @@
+Bundle-Name: EMF OSGi Tests Minimal 
+Bundle-Description: Eclipse Fennec EMF OSGi minimal integration tests container
+
+-dependson: org.eclipse.fennec.emf.osgi.itest
+
+-baseline: 
+-library: \
+	enable-emf,\
+	enableOSGi-Test
+-buildpath: \
+	org.eclipse.fennec.emf.osgi.api;version=snapshot

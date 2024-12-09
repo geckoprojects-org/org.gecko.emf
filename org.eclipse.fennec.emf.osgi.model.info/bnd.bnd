@@ -1,0 +1,10 @@
+-buildpath: \
+	org.eclipse.fennec.emf.osgi;version=project,\
+	org.osgi.annotation.bundle,\
+	org.osgi.service.component.annotations,\
+	org.eclipse.emf.ecore,\
+	org.eclipse.emf.common,\
+	org.osgi.annotation.versioning
+
+Export-Package: org.eclipse.fennec.emf.osgi.model.info
+Private-Package: org.eclipse.fennec.emf.osgi.model.info.impl

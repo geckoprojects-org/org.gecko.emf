@@ -1,0 +1,24 @@
+src=${^src},src-gen
+
+-buildpath: \
+	org.eclipse.emf.ecore;version=latest,\
+	org.eclipse.emf.common;version=latest,\
+	org.eclipse.emf.ecore.xmi;version=latest,\
+	org.osgi.annotation.bundle;version=latest,\
+	org.osgi.annotation.versioning;version=latest,\
+	org.osgi.service.component.annotations;version=latest,\
+	org.osgi.service.condition;version=latest,\
+	org.osgi.framework;version=latest
+
+-includeresource.model: model=other/main/resources/model
+
+#-dependson: org.gecko.emf.osgi.codegen
+
+#-generate:\
+#	other/main/resources/model/basic.genmodel;\
+#		generate="fennecEMF";\
+#		genmodel=other/main/resources/model/basic.genmodel;\
+#		output=src-gen;\
+#		version=${base-version};\
+#		clean=false;\
+#		logfile=out.log

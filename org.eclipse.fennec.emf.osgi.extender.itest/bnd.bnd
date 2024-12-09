@@ -1,0 +1,15 @@
+Test-Cases: ${classes;HIERARCHY_INDIRECTLY_ANNOTATED;org.junit.platform.commons.annotation.Testable;CONCRETE}
+
+-library: enableOSGi-Test
+
+-buildpath: \
+	org.osgi.framework;version=latest,\
+	org.eclipse.emf.common;version=latest,\
+	org.eclipse.emf.ecore;version=latest,\
+	org.eclipse.emf.ecore.xmi;version=latest,\
+	org.eclipse.fennec.emf.osgi.api;version=snapshot
+	
+Bundle-Name: EMF Model Extender Tests
+Bundle-Description: Eclipse Fennec EMF OSGi model extender integration tests
+
+-dependson: org.eclipse.fennec.emf.osgi.example.model.extender

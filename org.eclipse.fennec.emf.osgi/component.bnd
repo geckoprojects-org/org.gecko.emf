@@ -1,0 +1,20 @@
+-privatepackage: \
+	org.eclipse.fennec.emf.osgi.components,\
+	org.eclipse.fennec.emf.osgi.components.config,\
+	org.eclipse.fennec.emf.osgi.components.dynamic,\
+	org.eclipse.fennec.emf.osgi.ecore,\
+	org.eclipse.fennec.emf.osgi.urihandler
+
+Export-Package: \
+	org.eclipse.fennec.emf.osgi,\
+	org.eclipse.fennec.emf.osgi.helper,\
+	org.eclipse.fennec.emf.osgi.factory,\
+	org.eclipse.fennec.emf.osgi.configurator,\
+	org.eclipse.fennec.emf.osgi.annotation.*,\
+	org.eclipse.fennec.emf.osgi.constants,\
+	org.eclipse.fennec.emf.osgi.components.config,\
+	org.eclipse.fennec.emf.osgi.provider,\
+	org.eclipse.fennec.emf.osgi.resourceset
+	
+Bundle-Name: EMF OSGi All-In-One Implementation
+Bundle-Description: Eclipse Fennec EMF OSGi Implementation all in one Bundle
