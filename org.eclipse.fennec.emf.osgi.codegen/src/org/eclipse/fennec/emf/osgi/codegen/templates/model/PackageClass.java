@@ -3,12 +3,12 @@ package org.eclipse.fennec.emf.osgi.codegen.templates.model;
 import java.util.*;
 import org.eclipse.emf.ecore.*;
 import org.eclipse.emf.ecore.util.EcoreUtil;
-import org.eclipse.fennec.emf.osgi.codegen.GeckoEmfGenerator;
-import org.eclipse.fennec.emf.osgi.codegen.templates.model.helper.GeneratorHelper;
 import org.eclipse.emf.codegen.ecore.genmodel.*;
 import org.eclipse.emf.codegen.ecore.genmodel.impl.Literals;
 import org.eclipse.emf.codegen.ecore.genmodel.util.GenModelUtil;
 import org.eclipse.emf.common.util.URI;
+import org.eclipse.fennec.emf.osgi.codegen.GeckoEmfGenerator;
+import org.eclipse.fennec.emf.osgi.codegen.templates.model.helper.GeneratorHelper;
 
 public class PackageClass
 {
