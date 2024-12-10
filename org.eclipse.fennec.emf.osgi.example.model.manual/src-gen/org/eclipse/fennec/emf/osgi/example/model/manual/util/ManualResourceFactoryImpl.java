@@ -1,4 +1,4 @@
-/*
+/**
  * Copyright (c) 2012 - 2022 Data In Motion and others.
  * All rights reserved. 
  *  
@@ -13,18 +13,11 @@
  */
 package org.eclipse.fennec.emf.osgi.example.model.manual.util;
 
-import java.util.HashMap;
-import java.util.Map;
-
 import org.eclipse.emf.common.util.URI;
 
 import org.eclipse.emf.ecore.resource.Resource;
 
 import org.eclipse.emf.ecore.resource.impl.ResourceFactoryImpl;
-
-import org.eclipse.fennec.emf.osgi.constants.EMFNamespaces;
-
-import org.eclipse.fennec.emf.osgi.example.model.manual.ManualPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -54,19 +47,6 @@ public class ManualResourceFactoryImpl extends ResourceFactoryImpl {
 	public Resource createResource(URI uri) {
 		Resource result = new ManualResourceImpl(uri);
 		return result;
-	}
-
-	/**
-	 * A method providing the Properties the services around this ResourceFactory should be registered with.
-	 * @generated
-	 */
-	public Map<String, Object> getServiceProperties() {
-		Map<String, Object> properties = new HashMap<String, Object>();
-		properties.put(EMFNamespaces.EMF_CONFIGURATOR_NAME, ManualPackage.eNAME);
-		properties.put(EMFNamespaces.EMF_MODEL_FILE_EXT, "manual");
-		properties.put(EMFNamespaces.EMF_MODEL_CONTENT_TYPE, "manual#1.0");
-		properties.put(EMFNamespaces.EMF_MODEL_VERSION, "1.0");
-		return properties;
 	}
 
 } //ManualResourceFactoryImpl

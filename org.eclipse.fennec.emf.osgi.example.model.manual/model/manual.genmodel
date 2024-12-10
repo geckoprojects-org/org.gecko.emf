@@ -8,7 +8,7 @@
     rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
     complianceLevel="8.0" copyrightFields="false" editPluginID="org.eclipse.fennec.emf.osgi.example.model.manual.edit"
     editorPluginID="org.eclipse.fennec.emf.osgi.example.model.manual.editor" usedGenPackages="../../org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore"
-    operationReflection="true" importOrganizing="true" oSGiCompatible="true">
+    operationReflection="true" importOrganizing="true">
   <foreignModel>basic.ecore</foreignModel>
   <genPackages prefix="Manual" basePackage="org.eclipse.fennec.emf.osgi.example.model"
       resource="XMI" disposableProviderFactory="true" contentTypeIdentifier="manual#1.0"

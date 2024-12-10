@@ -1,8 +1,8 @@
-java.net.MalformedURLException
-	at java.base/java.net.URL.<init>(URL.java:708)
-	at java.base/java.net.URL.<init>(URL.java:569)
-	at java.base/java.net.URL.<init>(URL.java:516)
-	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLEntityManager.setupCurrentEntity(XMLEntityManager.java:650)
+java.net.MalformedURLException: Cannot invoke "String.length()" because "spec" is null
+	at java.base/java.net.URL.<init>(URL.java:806)
+	at java.base/java.net.URL.<init>(URL.java:654)
+	at java.base/java.net.URL.<init>(URL.java:590)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLEntityManager.setupCurrentEntity(XMLEntityManager.java:651)
 	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLVersionDetector.determineDocVersion(XMLVersionDetector.java:150)
 	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:861)
 	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:825)
@@ -38,9 +38,9 @@ java.net.MalformedURLException
 	at aQute.bnd.build.Workspace.readLocked(Workspace.java:1504)
 	at bndtools.central.Central.bndCall(Central.java:798)
 	at org.bndtools.builder.BndSourceGenerateCompilationParticipant.aboutToBuild(BndSourceGenerateCompilationParticipant.java:58)
-	at org.eclipse.jdt.internal.core.builder.JavaBuilder.initializeBuilder(JavaBuilder.java:654)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.initializeBuilder(JavaBuilder.java:652)
 	at org.eclipse.jdt.internal.core.builder.JavaBuilder.build(JavaBuilder.java:185)
-	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:1079)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:1077)
 	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
 	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:296)
 	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:352)
@@ -53,4 +53,6 @@ java.net.MalformedURLException
 	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:207)
 	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:300)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
-Caused by: java.lang.NullPointerException
+Caused by: java.lang.NullPointerException: Cannot invoke "String.length()" because "spec" is null
+	at java.base/java.net.URL.<init>(URL.java:712)
+	... 53 more

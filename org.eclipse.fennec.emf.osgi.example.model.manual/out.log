@@ -1,22 +1,20 @@
 [INFO] Running Eclipse Fennec EMF Codegen Version 7.0.0
 [INFO] Output configured: src-gen
-[INFO] Output result: /opt/git/geckoprojects-emf/org.eclipse.fennec.emf.osgi.example.model.manual/src-gen
+[INFO] Output result: N:\git\eclipse\fennec\osgi.emf\org.eclipse.fennec.emf.osgi.example.model.manual\src-gen
 [INFO] genmodelLocation: null
-[INFO] Running for genmodel model/manual.genmodel in /opt/git/geckoprojects-emf/org.eclipse.fennec.emf.osgi.example.model.manual
+[INFO] Running for genmodel model/manual.genmodel in N:\git\eclipse\fennec\osgi.emf\org.eclipse.fennec.emf.osgi.example.model.manual
 [INFO] Setting up ResourceUriHandler:
 [INFO]     bsn: org.eclipse.fennec.emf.osgi.example.model.manual
-[INFO]     base: /opt/git/geckoprojects-emf/org.eclipse.fennec.emf.osgi.example.model.manual
+[INFO]     base: N:\git\eclipse\fennec\osgi.emf\org.eclipse.fennec.emf.osgi.example.model.manual
 [INFO]     projectDirName: org.eclipse.fennec.emf.osgi.example.model.manual
 [INFO]     basePath: null
 [INFO]     buildPath:
-[INFO]       Container: /home/ilenia/.m2/repository/org/osgi/org.osgi.framework/1.10.0/org.osgi.framework-1.10.0.jar
-[INFO]       Container: /home/ilenia/.m2/repository/org/eclipse/emf/org.eclipse.emf.ecore.xmi/2.36.0/org.eclipse.emf.ecore.xmi-2.36.0.jar
-[INFO]       Container: /home/ilenia/.m2/repository/org/osgi/org.osgi.annotation.bundle/2.0.0/org.osgi.annotation.bundle-2.0.0.jar
-[INFO]       Container: /home/ilenia/.m2/repository/org/eclipse/emf/org.eclipse.emf.common/2.29.0/org.eclipse.emf.common-2.29.0.jar
-[INFO]       Container: /home/ilenia/.m2/repository/org/osgi/org.osgi.service.component.annotations/1.5.1/org.osgi.service.component.annotations-1.5.1.jar
-[INFO]       Container: /home/ilenia/.m2/repository/org/osgi/org.osgi.annotation.versioning/1.1.2/org.osgi.annotation.versioning-1.1.2.jar
-[INFO]       Container: /opt/git/geckoprojects-emf/org.eclipse.fennec.emf.osgi/bin
-[INFO]       Container: /home/ilenia/.m2/repository/org/eclipse/emf/org.eclipse.emf.ecore/2.35.0/org.eclipse.emf.ecore-2.35.0.jar
+[INFO]       Container: C:/Users/ungei/.m2/repository/org/eclipse/emf/org.eclipse.emf.ecore.xmi/2.36.0/org.eclipse.emf.ecore.xmi-2.36.0.jar
+[INFO]       Container: C:/Users/ungei/.m2/repository/org/osgi/org.osgi.service.metatype.annotations/1.4.1/org.osgi.service.metatype.annotations-1.4.1.jar
+[INFO]       Container: C:/Users/ungei/.m2/repository/org/osgi/org.osgi.annotation.versioning/1.1.2/org.osgi.annotation.versioning-1.1.2.jar
+[INFO]       Container: C:/Users/ungei/.m2/repository/org/osgi/org.osgi.service.component.annotations/1.5.1/org.osgi.service.component.annotations-1.5.1.jar
+[INFO]       Container: N:/git/eclipse/fennec/osgi.emf/org.eclipse.fennec.emf.osgi/bin
+[INFO]       Container: C:/Users/ungei/.m2/repository/org/eclipse/emf/org.eclipse.emf.ecore/2.35.0/org.eclipse.emf.ecore-2.35.0.jar
 [INFO]         |->: model/Ecore.genmodel - model/Ecore.genmodel
 [INFO]         |->: model/ExtendedMetaData.ecore - model/ExtendedMetaData.ecore
 [INFO]         |->: model/XMLNamespace.ecore - model/XMLNamespace.ecore
@@ -26,8 +24,10 @@
 [INFO]         |->: model/Ecore.ecore - model/Ecore.ecore
 [INFO]         |->: model/DateConversionDelegateAnnotation.ecore - model/DateConversionDelegateAnnotation.ecore
 [INFO]         |->: model/EcoreAnnotation.ecore - model/EcoreAnnotation.ecore
-[INFO]       Container: /home/ilenia/.m2/repository/org/osgi/org.osgi.service.condition/1.0.0/org.osgi.service.condition-1.0.0.jar
-[INFO]       Container: /home/ilenia/.m2/repository/org/osgi/org.osgi.service.metatype.annotations/1.4.1/org.osgi.service.metatype.annotations-1.4.1.jar
+[INFO]       Container: C:/Users/ungei/.m2/repository/org/eclipse/emf/org.eclipse.emf.common/2.29.0/org.eclipse.emf.common-2.29.0.jar
+[INFO]       Container: C:/Users/ungei/.m2/repository/org/osgi/org.osgi.service.condition/1.0.0/org.osgi.service.condition-1.0.0.jar
+[INFO]       Container: C:/Users/ungei/.m2/repository/org/osgi/org.osgi.framework/1.10.0/org.osgi.framework-1.10.0.jar
+[INFO]       Container: C:/Users/ungei/.m2/repository/org/osgi/org.osgi.annotation.bundle/2.0.0/org.osgi.annotation.bundle-2.0.0.jar
 [INFO] Loading resource://org.eclipse.fennec.emf.osgi.example.model.manual/model/manual.genmodel
 [INFO] Asked to handle resource://org.eclipse.fennec.emf.osgi.example.model.manual/model/manual.genmodel
 [INFO] Asked to handle resource://org.eclipse.fennec.emf.osgi.example.model.manual/model/manual.genmodel
@@ -41,30 +41,26 @@
 [INFO] Asked to open InputStream for resource://org.eclipse.fennec.emf.osgi.example.model.manual/../org.eclipse.emf.ecore/model/Ecore.genmodel
 [INFO] sanatized uri resource://org.eclipse.emf.ecore/model/Ecore.genmodel
 [INFO] bsn according to URI org.eclipse.emf.ecore
-[INFO] Comparing org.eclipse.emf.ecore with container using getBSN() org.osgi.framework
 [INFO] Comparing org.eclipse.emf.ecore with container using getBSN() org.eclipse.emf.ecore.xmi
-[INFO] Comparing org.eclipse.emf.ecore with container using getBSN() org.osgi.annotation.bundle
-[INFO] Comparing org.eclipse.emf.ecore with container using getBSN() org.eclipse.emf.common
-[INFO] Comparing org.eclipse.emf.ecore with container using getBSN() org.osgi.service.component.annotations
+[INFO] Comparing org.eclipse.emf.ecore with container using getBSN() org.osgi.service.metatype.annotations
 [INFO] Comparing org.eclipse.emf.ecore with container using getBSN() org.osgi.annotation.versioning
+[INFO] Comparing org.eclipse.emf.ecore with container using getBSN() org.osgi.service.component.annotations
 [INFO] Comparing org.eclipse.emf.ecore with container using getBSN() org.eclipse.fennec.emf.osgi
 [INFO] Comparing org.eclipse.emf.ecore with container using getBSN() org.eclipse.emf.ecore
-[INFO] Match in /home/ilenia/.m2/repository/org/eclipse/emf/org.eclipse.emf.ecore/2.35.0/org.eclipse.emf.ecore-2.35.0.jar
+[INFO] Match in C:/Users/ungei/.m2/repository/org/eclipse/emf/org.eclipse.emf.ecore/2.35.0/org.eclipse.emf.ecore-2.35.0.jar
 [INFO] comparing URIs resource://org.eclipse.emf.ecore/model/Ecore.genmodel with the requested resource://org.eclipse.emf.ecore/model/Ecore.genmodel
 [INFO] Asked to handle resource://org.eclipse.fennec.emf.osgi.example.model.manual/../org.eclipse.emf.ecore/model/Ecore.ecore
 [INFO] Asked to handle resource://org.eclipse.fennec.emf.osgi.example.model.manual/../org.eclipse.emf.ecore/model/Ecore.ecore
 [INFO] Asked to open InputStream for resource://org.eclipse.fennec.emf.osgi.example.model.manual/../org.eclipse.emf.ecore/model/Ecore.ecore
 [INFO] sanatized uri resource://org.eclipse.emf.ecore/model/Ecore.ecore
 [INFO] bsn according to URI org.eclipse.emf.ecore
-[INFO] Comparing org.eclipse.emf.ecore with container using getBSN() org.osgi.framework
 [INFO] Comparing org.eclipse.emf.ecore with container using getBSN() org.eclipse.emf.ecore.xmi
-[INFO] Comparing org.eclipse.emf.ecore with container using getBSN() org.osgi.annotation.bundle
-[INFO] Comparing org.eclipse.emf.ecore with container using getBSN() org.eclipse.emf.common
-[INFO] Comparing org.eclipse.emf.ecore with container using getBSN() org.osgi.service.component.annotations
+[INFO] Comparing org.eclipse.emf.ecore with container using getBSN() org.osgi.service.metatype.annotations
 [INFO] Comparing org.eclipse.emf.ecore with container using getBSN() org.osgi.annotation.versioning
+[INFO] Comparing org.eclipse.emf.ecore with container using getBSN() org.osgi.service.component.annotations
 [INFO] Comparing org.eclipse.emf.ecore with container using getBSN() org.eclipse.fennec.emf.osgi
 [INFO] Comparing org.eclipse.emf.ecore with container using getBSN() org.eclipse.emf.ecore
-[INFO] Match in /home/ilenia/.m2/repository/org/eclipse/emf/org.eclipse.emf.ecore/2.35.0/org.eclipse.emf.ecore-2.35.0.jar
+[INFO] Match in C:/Users/ungei/.m2/repository/org/eclipse/emf/org.eclipse.emf.ecore/2.35.0/org.eclipse.emf.ecore-2.35.0.jar
 [INFO] comparing URIs resource://org.eclipse.emf.ecore/model/Ecore.genmodel with the requested resource://org.eclipse.emf.ecore/model/Ecore.ecore
 [INFO] comparing URIs resource://org.eclipse.emf.ecore/model/ExtendedMetaData.ecore with the requested resource://org.eclipse.emf.ecore/model/Ecore.ecore
 [INFO] comparing URIs resource://org.eclipse.emf.ecore/model/XMLNamespace.ecore with the requested resource://org.eclipse.emf.ecore/model/Ecore.ecore
@@ -116,7 +112,7 @@
 [INFO] Asked to handle platform:/resource/org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/util/ManualResourceImpl.java
 [INFO] Asked to open OutputStream for platform:/resource/org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/util/ManualResourceImpl.java
 [INFO] Sanatized resource://org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/util/ManualResourceImpl.java
-[INFO] Opening file /opt/git/geckoprojects-emf/org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/util/ManualResourceImpl.java
+[INFO] Opening file N:\git\eclipse\fennec\osgi.emf\org.eclipse.fennec.emf.osgi.example.model.manual\src-gen\org\eclipse\fennec\emf\osgi\example\model\manual\util\ManualResourceImpl.java
 [INFO] subtask Generating package interface info for package 'org.eclipse.fennec.emf.osgi.example.model.manual.ManualPackage'
 [INFO] subtask Generating /org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/ManualPackage.java
 [INFO] internally worked 1.0 on null
@@ -140,7 +136,7 @@
 [INFO] Asked to handle platform:/resource/org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/ManualPackage.java
 [INFO] Asked to open OutputStream for platform:/resource/org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/ManualPackage.java
 [INFO] Sanatized resource://org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/ManualPackage.java
-[INFO] Opening file /opt/git/geckoprojects-emf/org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/ManualPackage.java
+[INFO] Opening file N:\git\eclipse\fennec\osgi.emf\org.eclipse.fennec.emf.osgi.example.model.manual\src-gen\org\eclipse\fennec\emf\osgi\example\model\manual\ManualPackage.java
 [INFO] subtask Generating Java class org.eclipse.fennec.emf.osgi.example.model.manual.impl.ManualPackageImpl
 [INFO] subtask Generating /org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/impl/ManualPackageImpl.java
 [INFO] internally worked 1.0 on null
@@ -164,7 +160,7 @@
 [INFO] Asked to handle platform:/resource/org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/impl/ManualPackageImpl.java
 [INFO] Asked to open OutputStream for platform:/resource/org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/impl/ManualPackageImpl.java
 [INFO] Sanatized resource://org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/impl/ManualPackageImpl.java
-[INFO] Opening file /opt/git/geckoprojects-emf/org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/impl/ManualPackageImpl.java
+[INFO] Opening file N:\git\eclipse\fennec\osgi.emf\org.eclipse.fennec.emf.osgi.example.model.manual\src-gen\org\eclipse\fennec\emf\osgi\example\model\manual\impl\ManualPackageImpl.java
 [INFO] subtask Generating factory interface info for package 'org.eclipse.fennec.emf.osgi.example.model.manual.ManualFactory'
 [INFO] subtask Generating /org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/ManualFactory.java
 [INFO] internally worked 1.0 on null
@@ -188,7 +184,7 @@
 [INFO] Asked to handle platform:/resource/org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/ManualFactory.java
 [INFO] Asked to open OutputStream for platform:/resource/org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/ManualFactory.java
 [INFO] Sanatized resource://org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/ManualFactory.java
-[INFO] Opening file /opt/git/geckoprojects-emf/org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/ManualFactory.java
+[INFO] Opening file N:\git\eclipse\fennec\osgi.emf\org.eclipse.fennec.emf.osgi.example.model.manual\src-gen\org\eclipse\fennec\emf\osgi\example\model\manual\ManualFactory.java
 [INFO] subtask Generating Java class org.eclipse.fennec.emf.osgi.example.model.manual.impl.ManualFactoryImpl
 [INFO] subtask Generating /org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/impl/ManualFactoryImpl.java
 [INFO] internally worked 1.0 on null
@@ -212,7 +208,7 @@
 [INFO] Asked to handle platform:/resource/org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/impl/ManualFactoryImpl.java
 [INFO] Asked to open OutputStream for platform:/resource/org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/impl/ManualFactoryImpl.java
 [INFO] Sanatized resource://org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/impl/ManualFactoryImpl.java
-[INFO] Opening file /opt/git/geckoprojects-emf/org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/impl/ManualFactoryImpl.java
+[INFO] Opening file N:\git\eclipse\fennec\osgi.emf\org.eclipse.fennec.emf.osgi.example.model.manual\src-gen\org\eclipse\fennec\emf\osgi\example\model\manual\impl\ManualFactoryImpl.java
 [INFO] subtask Generating Java class org.eclipse.fennec.emf.osgi.example.model.manual.util.ManualSwitch
 [INFO] subtask Generating /org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/util/ManualSwitch.java
 [INFO] internally worked 1.0 on null
@@ -236,7 +232,7 @@
 [INFO] Asked to handle platform:/resource/org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/util/ManualSwitch.java
 [INFO] Asked to open OutputStream for platform:/resource/org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/util/ManualSwitch.java
 [INFO] Sanatized resource://org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/util/ManualSwitch.java
-[INFO] Opening file /opt/git/geckoprojects-emf/org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/util/ManualSwitch.java
+[INFO] Opening file N:\git\eclipse\fennec\osgi.emf\org.eclipse.fennec.emf.osgi.example.model.manual\src-gen\org\eclipse\fennec\emf\osgi\example\model\manual\util\ManualSwitch.java
 [INFO] subtask Generating Java class org.eclipse.fennec.emf.osgi.example.model.manual.util.ManualAdapterFactory
 [INFO] subtask Generating /org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/util/ManualAdapterFactory.java
 [INFO] internally worked 1.0 on null
@@ -260,31 +256,7 @@
 [INFO] Asked to handle platform:/resource/org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/util/ManualAdapterFactory.java
 [INFO] Asked to open OutputStream for platform:/resource/org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/util/ManualAdapterFactory.java
 [INFO] Sanatized resource://org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/util/ManualAdapterFactory.java
-[INFO] Opening file /opt/git/geckoprojects-emf/org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/util/ManualAdapterFactory.java
-[INFO] subtask Generating EPackageConfigurator for package 'manual'
-[INFO] subtask Generating /org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/configuration/ManualEPackageConfigurator.java
-[INFO] internally worked 1.0 on null
-[INFO] subtask 
-[INFO] toPlatformResourceURI: /org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/configuration/ManualEPackageConfigurator.java
-[INFO] toPlatformResourceURI result: /org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/configuration/ManualEPackageConfigurator.java
-[INFO] Asked to handle platform:/resource/org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/configuration/ManualEPackageConfigurator.java
-[INFO] Asked if exists platform:/resource/org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/configuration/ManualEPackageConfigurator.java
-[INFO] toPlatformResourceURI: /org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/configuration/ManualEPackageConfigurator.java
-[INFO] toPlatformResourceURI result: /org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/configuration/ManualEPackageConfigurator.java
-[INFO] Asked to handle platform:/resource/org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/configuration/ManualEPackageConfigurator.java
-[INFO] Asked to open InputStream for platform:/resource/org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/configuration/ManualEPackageConfigurator.java
-[INFO] sanatized uri resource://org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/configuration/ManualEPackageConfigurator.java
-[INFO] bsn according to URI org.eclipse.fennec.emf.osgi.example.model.manual
-[INFO] The bsn segment part fits to: org.eclipse.fennec.emf.osgi.example.model.manual
-[INFO] subtask Preparing new /org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/configuration/ManualEPackageConfigurator.java
-[INFO] toPlatformResourceURI: /org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/configuration/ManualEPackageConfigurator.java
-[INFO] toPlatformResourceURI result: /org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/configuration/ManualEPackageConfigurator.java
-[INFO] toPlatformResourceURI: /org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/configuration/ManualEPackageConfigurator.java
-[INFO] toPlatformResourceURI result: /org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/configuration/ManualEPackageConfigurator.java
-[INFO] Asked to handle platform:/resource/org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/configuration/ManualEPackageConfigurator.java
-[INFO] Asked to open OutputStream for platform:/resource/org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/configuration/ManualEPackageConfigurator.java
-[INFO] Sanatized resource://org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/configuration/ManualEPackageConfigurator.java
-[INFO] Opening file /opt/git/geckoprojects-emf/org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/configuration/ManualEPackageConfigurator.java
+[INFO] Opening file N:\git\eclipse\fennec\osgi.emf\org.eclipse.fennec.emf.osgi.example.model.manual\src-gen\org\eclipse\fennec\emf\osgi\example\model\manual\util\ManualAdapterFactory.java
 [INFO] subtask Generating Java class org.eclipse.fennec.emf.osgi.example.model.manual.util.ManualResourceFactoryImpl
 [INFO] subtask Generating /org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/util/ManualResourceFactoryImpl.java
 [INFO] internally worked 1.0 on null
@@ -308,107 +280,13 @@
 [INFO] Asked to handle platform:/resource/org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/util/ManualResourceFactoryImpl.java
 [INFO] Asked to open OutputStream for platform:/resource/org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/util/ManualResourceFactoryImpl.java
 [INFO] Sanatized resource://org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/util/ManualResourceFactoryImpl.java
-[INFO] Opening file /opt/git/geckoprojects-emf/org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/util/ManualResourceFactoryImpl.java
-[INFO] subtask Generating OSGi configuration component for package 'manual'
-[INFO] subtask Generating /org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/configuration/ManualConfigurationComponent.java
-[INFO] internally worked 1.0 on null
-[INFO] subtask 
-[INFO] toPlatformResourceURI: /org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/configuration/ManualConfigurationComponent.java
-[INFO] toPlatformResourceURI result: /org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/configuration/ManualConfigurationComponent.java
-[INFO] Asked to handle platform:/resource/org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/configuration/ManualConfigurationComponent.java
-[INFO] Asked if exists platform:/resource/org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/configuration/ManualConfigurationComponent.java
-[INFO] toPlatformResourceURI: /org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/configuration/ManualConfigurationComponent.java
-[INFO] toPlatformResourceURI result: /org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/configuration/ManualConfigurationComponent.java
-[INFO] Asked to handle platform:/resource/org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/configuration/ManualConfigurationComponent.java
-[INFO] Asked to open InputStream for platform:/resource/org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/configuration/ManualConfigurationComponent.java
-[INFO] sanatized uri resource://org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/configuration/ManualConfigurationComponent.java
-[INFO] bsn according to URI org.eclipse.fennec.emf.osgi.example.model.manual
-[INFO] The bsn segment part fits to: org.eclipse.fennec.emf.osgi.example.model.manual
-[INFO] subtask Preparing new /org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/configuration/ManualConfigurationComponent.java
-[INFO] toPlatformResourceURI: /org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/configuration/ManualConfigurationComponent.java
-[INFO] toPlatformResourceURI result: /org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/configuration/ManualConfigurationComponent.java
-[INFO] toPlatformResourceURI: /org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/configuration/ManualConfigurationComponent.java
-[INFO] toPlatformResourceURI result: /org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/configuration/ManualConfigurationComponent.java
-[INFO] Asked to handle platform:/resource/org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/configuration/ManualConfigurationComponent.java
-[INFO] Asked to open OutputStream for platform:/resource/org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/configuration/ManualConfigurationComponent.java
-[INFO] Sanatized resource://org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/configuration/ManualConfigurationComponent.java
-[INFO] Opening file /opt/git/geckoprojects-emf/org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/configuration/ManualConfigurationComponent.java
-[INFO] subtask Generating package info for package 'manual'
-[INFO] subtask Generating /org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/package-info.java
-[INFO] internally worked 1.0 on null
-[INFO] subtask 
-[INFO] toPlatformResourceURI: /org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/package-info.java
-[INFO] toPlatformResourceURI result: /org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/package-info.java
-[INFO] Asked to handle platform:/resource/org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/package-info.java
-[INFO] Asked if exists platform:/resource/org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/package-info.java
-[INFO] toPlatformResourceURI: /org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/package-info.java
-[INFO] toPlatformResourceURI result: /org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/package-info.java
-[INFO] Asked to handle platform:/resource/org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/package-info.java
-[INFO] Asked to open InputStream for platform:/resource/org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/package-info.java
-[INFO] sanatized uri resource://org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/package-info.java
-[INFO] bsn according to URI org.eclipse.fennec.emf.osgi.example.model.manual
-[INFO] The bsn segment part fits to: org.eclipse.fennec.emf.osgi.example.model.manual
-[INFO] subtask Preparing new /org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/package-info.java
-[INFO] toPlatformResourceURI: /org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/package-info.java
-[INFO] toPlatformResourceURI result: /org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/package-info.java
-[INFO] toPlatformResourceURI: /org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/package-info.java
-[INFO] toPlatformResourceURI result: /org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/package-info.java
-[INFO] Asked to handle platform:/resource/org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/package-info.java
-[INFO] Asked to open OutputStream for platform:/resource/org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/package-info.java
-[INFO] Sanatized resource://org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/package-info.java
-[INFO] Opening file /opt/git/geckoprojects-emf/org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/package-info.java
-[INFO] subtask Generating /org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/impl/package-info.java
-[INFO] internally worked 1.0 on null
-[INFO] subtask 
-[INFO] toPlatformResourceURI: /org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/impl/package-info.java
-[INFO] toPlatformResourceURI result: /org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/impl/package-info.java
-[INFO] Asked to handle platform:/resource/org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/impl/package-info.java
-[INFO] Asked if exists platform:/resource/org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/impl/package-info.java
-[INFO] toPlatformResourceURI: /org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/impl/package-info.java
-[INFO] toPlatformResourceURI result: /org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/impl/package-info.java
-[INFO] Asked to handle platform:/resource/org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/impl/package-info.java
-[INFO] Asked to open InputStream for platform:/resource/org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/impl/package-info.java
-[INFO] sanatized uri resource://org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/impl/package-info.java
-[INFO] bsn according to URI org.eclipse.fennec.emf.osgi.example.model.manual
-[INFO] The bsn segment part fits to: org.eclipse.fennec.emf.osgi.example.model.manual
-[INFO] subtask Preparing new /org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/impl/package-info.java
-[INFO] toPlatformResourceURI: /org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/impl/package-info.java
-[INFO] toPlatformResourceURI result: /org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/impl/package-info.java
-[INFO] toPlatformResourceURI: /org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/impl/package-info.java
-[INFO] toPlatformResourceURI result: /org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/impl/package-info.java
-[INFO] Asked to handle platform:/resource/org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/impl/package-info.java
-[INFO] Asked to open OutputStream for platform:/resource/org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/impl/package-info.java
-[INFO] Sanatized resource://org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/impl/package-info.java
-[INFO] Opening file /opt/git/geckoprojects-emf/org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/impl/package-info.java
-[INFO] subtask Generating /org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/util/package-info.java
-[INFO] internally worked 1.0 on null
-[INFO] subtask 
-[INFO] toPlatformResourceURI: /org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/util/package-info.java
-[INFO] toPlatformResourceURI result: /org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/util/package-info.java
-[INFO] Asked to handle platform:/resource/org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/util/package-info.java
-[INFO] Asked if exists platform:/resource/org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/util/package-info.java
-[INFO] toPlatformResourceURI: /org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/util/package-info.java
-[INFO] toPlatformResourceURI result: /org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/util/package-info.java
-[INFO] Asked to handle platform:/resource/org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/util/package-info.java
-[INFO] Asked to open InputStream for platform:/resource/org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/util/package-info.java
-[INFO] sanatized uri resource://org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/util/package-info.java
-[INFO] bsn according to URI org.eclipse.fennec.emf.osgi.example.model.manual
-[INFO] The bsn segment part fits to: org.eclipse.fennec.emf.osgi.example.model.manual
-[INFO] subtask Preparing new /org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/util/package-info.java
-[INFO] toPlatformResourceURI: /org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/util/package-info.java
-[INFO] toPlatformResourceURI result: /org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/util/package-info.java
-[INFO] toPlatformResourceURI: /org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/util/package-info.java
-[INFO] toPlatformResourceURI result: /org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/util/package-info.java
-[INFO] Asked to handle platform:/resource/org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/util/package-info.java
-[INFO] Asked to open OutputStream for platform:/resource/org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/util/package-info.java
-[INFO] Sanatized resource://org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/util/package-info.java
-[INFO] Opening file /opt/git/geckoprojects-emf/org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/util/package-info.java
+[INFO] Opening file N:\git\eclipse\fennec\osgi.emf\org.eclipse.fennec.emf.osgi.example.model.manual\src-gen\org\eclipse\fennec\emf\osgi\example\model\manual\util\ManualResourceFactoryImpl.java
 [INFO] subtask Generating Foo
 [INFO] internally worked 1.0 on null
 [INFO] subtask 
 [INFO] subtask Generating Java interface org.eclipse.fennec.emf.osgi.example.model.manual.Foo
 [INFO] subtask Generating /org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/Foo.java
-[INFO] internally worked 1.0 on null
+[INFO] internally worked 1.0 on Generating Java interface org.eclipse.fennec.emf.osgi.example.model.manual.Foo
 [INFO] subtask 
 [INFO] Asked to handle platform:/resource/org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/Foo.java
 [INFO] Asked if exists platform:/resource/org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/Foo.java
@@ -421,10 +299,10 @@
 [INFO] Asked to handle platform:/resource/org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/Foo.java
 [INFO] Asked to open OutputStream for platform:/resource/org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/Foo.java
 [INFO] Sanatized resource://org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/Foo.java
-[INFO] Opening file /opt/git/geckoprojects-emf/org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/Foo.java
+[INFO] Opening file N:\git\eclipse\fennec\osgi.emf\org.eclipse.fennec.emf.osgi.example.model.manual\src-gen\org\eclipse\fennec\emf\osgi\example\model\manual\Foo.java
 [INFO] subtask Generating Java class org.eclipse.fennec.emf.osgi.example.model.manual.impl.FooImpl
 [INFO] subtask Generating /org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/impl/FooImpl.java
-[INFO] internally worked 1.0 on null
+[INFO] internally worked 1.0 on Generating Java interface org.eclipse.fennec.emf.osgi.example.model.manual.Foo
 [INFO] subtask 
 [INFO] Asked to handle platform:/resource/org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/impl/FooImpl.java
 [INFO] Asked if exists platform:/resource/org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/impl/FooImpl.java
@@ -437,4 +315,4 @@
 [INFO] Asked to handle platform:/resource/org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/impl/FooImpl.java
 [INFO] Asked to open OutputStream for platform:/resource/org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/impl/FooImpl.java
 [INFO] Sanatized resource://org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/impl/FooImpl.java
-[INFO] Opening file /opt/git/geckoprojects-emf/org.eclipse.fennec.emf.osgi.example.model.manual/src-gen/org/eclipse/fennec/emf/osgi/example/model/manual/impl/FooImpl.java
+[INFO] Opening file N:\git\eclipse\fennec\osgi.emf\org.eclipse.fennec.emf.osgi.example.model.manual\src-gen\org\eclipse\fennec\emf\osgi\example\model\manual\impl\FooImpl.java
