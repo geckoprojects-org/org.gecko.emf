@@ -22,14 +22,14 @@ javac.target: 1.8
  	geckoOSGi-Test,\
 	geckoJacoco
 
-github-project: org.gecko.emf
+github-project: osgi.emf
 
 dimcBaselining: true
 mavenCentral: true
 
 -baseline: *
 
--groupid: org.geckoprojects.emf
+-groupid: org.eclipse.fennec.emf
 
 -fixupmessages: \
 	"No metadata for revision";\
