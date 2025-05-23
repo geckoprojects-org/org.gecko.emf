@@ -16,5 +16,5 @@
  * @author mark
  * @since 15.12.2023
  */
-@org.osgi.annotation.versioning.Version("1.1.0")
+@org.osgi.annotation.versioning.Version("1.1.1")
 package org.gecko.emf.osgi.constants;
