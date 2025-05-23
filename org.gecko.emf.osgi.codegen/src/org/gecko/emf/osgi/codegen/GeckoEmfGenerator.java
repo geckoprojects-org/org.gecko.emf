@@ -164,6 +164,7 @@ public class GeckoEmfGenerator implements Generator<GeneratorOptions> {
 
 			Map<Container, Map<String, String>> refModels = extractedLocationsWithCap(context.getProject().getBuildpath());
 			Project project = (Project) context.getParent();
+			project.setFileMustExist(false);
 			Iterator<String> iterator = project.getBsns().iterator();
 			String bsn = iterator.hasNext() ? iterator.next() : context.getParent()
 					.toString();
