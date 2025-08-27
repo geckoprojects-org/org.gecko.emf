@@ -44,6 +44,7 @@ import org.gecko.emf.osgi.constants.EMFNamespaces;
 import org.gecko.emf.osgi.factory.ResourceSetPrototypeFactory;
 import org.gecko.emf.osgi.helper.ServicePropertiesHelper;
 import org.gecko.emf.osgi.helper.ServicePropertyContext;
+import org.gecko.emf.osgi.urihandler.RestfulURIHandlerImpl;
 import org.osgi.framework.Constants;
 import org.osgi.framework.FrameworkUtil;
 import org.osgi.framework.PrototypeServiceFactory;
@@ -325,6 +326,7 @@ public class DefaultResourceSetFactory implements ResourceSetFactory {
 		ResourceSet resourceSet = internalCreateResourceSet();
 		resourceSet.setPackageRegistry(new DelegatingEPackageRegistry(packageRegistry));
 		resourceSet.setResourceFactoryRegistry(new DelegatingResourceFactoryRegistry(rfr));
+		resourceSet.getURIConverter().getURIHandlers().add(0, new RestfulURIHandlerImpl());
 		resourceSetConfigurators.forEach(c->c.configureResourceSet(resourceSet));
 		return resourceSet;
 	}
